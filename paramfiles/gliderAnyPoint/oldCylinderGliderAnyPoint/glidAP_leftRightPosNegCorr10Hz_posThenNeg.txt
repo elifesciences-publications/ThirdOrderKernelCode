@@ -1,0 +1,25 @@
+PARAMS	23							
+EPOCHS	8							
+Stimulus.epochName	Gray Interleave	10Hz L+	Gray Interleave	10Hz R+	Gray Interleave	10Hz L-	Gray Interleave	10Hz R-
+Stimulus.stimtype	41	41	41	41	41	41	41	41
+Stimulus.ordertype	1	1	1	1	1	1	1	1
+Stimulus.duration	300	300	300	300	300	300	300	300
+Stimulus.twoEyes	0	0	0	0	0	0	0	0
+Stimulus.updateL	18	18	18	18	18	18	18	18
+Stimulus.updateR	18	18	18	18	18	18	18	18
+Stimulus.delayL	1	1	1	1	1	1	1	1
+Stimulus.delayR	1	1	1	1	1	1	1	1
+Stimulus.corrSignL	1	1	1	1	-1	-1	-1	-1
+Stimulus.corrSignR	1	1	1	1	-1	-1	-1	-1
+Stimulus.dirXL	1	1	-1	-1	1	1	-1	-1
+Stimulus.dirXR	1	1	-1	-1	1	1	-1	-1
+Stimulus.dirYL	0	0	0	0	0	0	0	0
+Stimulus.dirYR	0	0	0	0	0	0	0	0
+Stimulus.numDegX	5	5	5	5	5	5	5	5
+Stimulus.numDegY	0	0	0	0	0	0	0	0
+Stimulus.eyeDist	0	0	0	0	0	0	0	0
+Stimulus.framesPerUp	3	3	3	3	3	3	3	3
+Stimulus.cL	0	1	0	1	0	1	0	1
+Stimulus.cR	0	1	0	1	0	1	0	1
+Stimulus.corrTypeL	2	2	2	2	2	2	2	2
+Stimulus.corrTypeR	2	2	2	2	2	2	2	2

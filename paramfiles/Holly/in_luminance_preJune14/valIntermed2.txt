@@ -1,0 +1,5 @@
+PARAMS	3		
+EPOCHS	3		
+Stimulus.stimtype	19	19	19
+Stimulus.duration	60	60	60
+Stimulus.val	0	0.1	0.9

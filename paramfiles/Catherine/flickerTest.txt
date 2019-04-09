@@ -1,0 +1,14 @@
+PARAMS	12						
+EPOCHS	7						
+Stimulus.epochName	Gray Interleave	0 std	0.1 std	 0.2 std	0.4 std	0.6 std	0.75 std
+Stimulus.stimtype	60023	60023	60023	60023	60023	60023	60023
+Stimulus.repeats	0	1	1	1	1	1	1
+Stimulus.ordertype	4	4	4	4	4	4	4
+Stimulus.duration	300	300	300	300	300	300	300
+Stimulus.framesPerUp	3	3	3	3	3	3	3
+Stimulus.flickerFreq	30	30	30	30	30	30	30
+Stimulus.mLum	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.pixWd	5	5	5	5	5	5	5
+Stimulus.reseed	1	1	1	1	1	1	1
+Stimulus.flickerVar	0	0	0.1	0.2	0.4	0.6	0.75
+Stimulus.pixHt	5	5	5	5	5	5	5

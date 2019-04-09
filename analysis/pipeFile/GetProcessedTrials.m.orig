@@ -1,0 +1,149 @@
+function analysis = GetProcessedTrials(flyResp,epochs,params,varargin)
+    normWalkDuration = 30; % number of frames in the interleave before the epoch to normalize walking to
+    normWalkShift = -30;
+    epsilon = 0.001; % when normalizing walking, may want to add epsilon to the denominator to avoid errors
+    analysis = cell(0,1);
+    duration = [];
+<<<<<<< HEAD
+    normWalk = 1;
+    interSubTurns = 0;
+=======
+    normTurnShift = -30;
+    normTurnDuration = 30;
+    
+    if size(flyResp,3) == 2
+        normWalk = 1;
+        meanSubtract = 1;
+        subtractInterleave = 0;
+        snipShift = 6; % behavioral delay in frames ~80-100ms
+    else
+        normWalk = 0;
+        meanSubtract = 0;
+        subtractInterleave = 0;
+        snipShift = 0;
+    end
+>>>>>>> master
+    
+    for ii = 1:2:length(varargin)
+        eval([varargin{ii} '= varargin{' num2str(ii+1) '};']);
+    end
+    
+    %% This file will
+    % GetSnips
+    % NormalizeWalking
+    % MeanSubtractTurns
+    
+    %% get snips of time over duration of epoch
+    % find the index at which each epoch starts
+    epochStartTimes = GetStartTimes(epochs);
+    % if by bad chance the last epoch had no trials this will return the
+    % wrong size cell array. fix here
+    for ll = (length(epochStartTimes)+1):length(params)
+        epochStartTimes{ll} = [];
+    end
+    
+    if isempty(duration)
+        epochDurations = [params.duration]';
+    else
+        epochDurations = zeros(length(params),1)+duration;
+    end
+    
+    maxRange = [min([snipShift normWalkShift+snipShift]) max(max(snipShift+epochDurations))];
+    
+    % get rid of start times and are too early and end times that are too late
+    filteredStartTimes = FilterStartTimes(epochStartTimes,maxRange,size(epochs,1));
+    
+    % shift all start times by a set amount to account for behavioral delay
+    shiftedEpochStartTimes = ShiftStartTimes(filteredStartTimes,snipShift);
+    % get the snips from the matrix and put them in a snip mat of the
+    % format {epochs, flies}[time trials]
+    snipMat = GetSnips(flyResp,shiftedEpochStartTimes,epochDurations);
+    
+    % write to output structure
+    analysis{end+1}.name = 'snipMat';
+    analysis{end}.snipMat = snipMat;
+    analysis{end}.shiftedEpochStartTimes = shiftedEpochStartTimes;
+    analysis{end}.epochDurations = epochDurations;
+    
+    %% normalize walking
+    % get the start times for the snip during interleave to normalize walking by
+    normWalkStartTimes = ShiftStartTimes(filteredStartTimes,normWalkShift+snipShift);
+    % get the duration of the snip during interleave to normalize walking by
+    normWalkDurations = normWalkDuration*ones(length(epochDurations),1);
+    % get the snip during interleave to normalize walking by
+    walkRespDuringInterleave = GetSnips(flyResp,normWalkStartTimes,normWalkDurations);
+    % average the snip during interleave to normalize walking by
+<<<<<<< HEAD
+    beforeEpochsAve = ReduceDimension(walkRespDuringInterleave,{'time' 'trials' 'epochs'});
+    beforeEachEpochAve = ReduceDimension(walkRespDuringInterleave,{'time' 'trials'});
+
+    % normalize walking
+    if (normWalk)
+        normalizedWalking = NormalizeWalking(snipMat,beforeEpochsAve,epsilon);
+=======
+    beforeEpochAveWalk = ReduceDimension(walkRespDuringInterleave,{'time' 'trials' 'epochs'});
+
+    % normalize walking
+    if normWalk
+        normalizedWalking = NormalizeWalking(snipMat,beforeEpochAveWalk,epsilon);
+>>>>>>> master
+    else
+        normalizedWalking = snipMat;
+    end
+
+    % write to output structure
+    analysis{end+1}.name = 'normalizedWalking';
+    analysis{end}.snipMat = normalizedWalking;
+    analysis{end}.normWalkStartTimes = normWalkStartTimes;
+    analysis{end}.normWalkDurations = normWalkDuration;
+    analysis{end}.walkRespDuringInterleave = walkRespDuringInterleave;
+    
+    %% mean subtract turns
+<<<<<<< HEAD
+    turnMeans = mean(flyResp(:,:,1),1);
+    if interSubTurns
+        meanSubtracted = InterleveSubtractTurns(normalizedWalking,beforeEachEpochAve);
+    else
+        % get mean of time trace and subtract from turns
+        meanSubtracted = MeanSubtractTurns(normalizedWalking,turnMeans);
+=======
+    % get mean of time trace and subtract from turns
+    
+    if meanSubtract
+        turnMeans = mean(flyResp(:,:,1),1);
+        meanSubtracted = MeanSubtractTurns(normalizedWalking,turnMeans);
+    else
+        meanSubtracted = normalizedWalking;
+>>>>>>> master
+    end
+
+    % write to output structure
+    analysis{end+1}.name = 'meanSubtracted';
+    analysis{end}.snipMat = meanSubtracted;
+    
+    %% subtract interleave from trace
+
+    % get the start times for the snip during interleave to subtract from
+    % the trace
+    interSubtractTurnStartTimes = ShiftStartTimes(filteredStartTimes,normTurnShift+snipShift);
+    % get the duration of the snip during interleave to normalize walking by
+    interSubtractTurnDurations = normTurnDuration*ones(size(epochDurations));
+    % get the snip during interleave to normalize walking by
+    turnRespDuringInterleave = GetSnips(flyResp,interSubtractTurnStartTimes,interSubtractTurnDurations);
+    % average the snip during interleave to normalize walking by
+    beforeEpochAveTurn = ReduceDimension(turnRespDuringInterleave,{'time'});
+
+    % normalize walking
+    if subtractInterleave
+        interSubtractTurning = SubtractInterleaveFromTurning(meanSubtracted,beforeEpochAveTurn);
+    else
+        interSubtractTurning = meanSubtracted;
+    end
+
+    % write to output structure
+    analysis{end+1}.name = 'normalizedTurning';
+    analysis{end}.snipMat = interSubtractTurning;
+    analysis{end}.normTurnStartTimes = interSubtractTurnStartTimes;
+    analysis{end}.normTurnDuration = normTurnDuration;
+    analysis{end}.turnRespDuringInterleave = turnRespDuringInterleave;
+end

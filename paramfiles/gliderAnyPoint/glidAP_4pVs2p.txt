@@ -1,0 +1,24 @@
+PARAMS	22										
+EPOCHS	8										
+Stimulus.stimtype	41	41	41	41	41	41	41	41	41	41	41
+Stimulus.ordertype	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.duration	300	60	60	60	60	60	60	60	60	60	60
+Stimulus.twoEyes	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.updateL	4	4	4	4	4	4	4	4	4	4	4
+Stimulus.updateR	4	4	4	4	4	4	4	4	4	4	4
+Stimulus.delayL	0	0	0	1	1	1	1	1	1	1	1
+Stimulus.delayR	0	0	0	1	1	1	1	1	1	1	1
+Stimulus.corrSignL	1	1	1	1	1	-1	-1	1	1	-1	-1
+Stimulus.corrSignR	1	1	1	1	1	-1	-1	1	1	-1	-1
+Stimulus.dirXL	1	-1	1	-1	1	-1	1	-1	1	-1	1
+Stimulus.dirXR	1	1	-1	1	-1	1	-1	1	-1	1	-1
+Stimulus.dirYL	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.dirYR	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.numDegX	5	5	5	5	5	5	5	5	5	5	5
+Stimulus.numDegY	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.eyeDist	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.framesPerUp	3	3	3	3	3	3	3	3	3	3	3
+Stimulus.cL	0	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.cR	0	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.corrTypeL	4	2	2	2	2	2	2	4	4	4	4
+Stimulus.corrTypeR	4	2	2	2	2	2	2	4	4	4	4

@@ -1,0 +1,21 @@
+PARAMS	19	
+EPOCHS	2	
+Stimulus.epochName	Right	Left
+Stimulus.stimtype	40014	40014
+Stimulus.ordertype	1	1
+Stimulus.duration	300	300
+Stimulus.twoEyes	0	0
+Stimulus.lum	0.5	0.5
+Stimulus.updateRate	60	60
+Stimulus.delay	1	1
+Stimulus.phi	1	1
+Stimulus.dirX	1	-1
+Stimulus.dirY	0	0
+Stimulus.numDegX	5	5
+Stimulus.numDegY	0	0
+Stimulus.eyeDist	0	0
+Stimulus.stripType	0	0
+Stimulus.flicker	0.25	0.25
+Stimulus.motion	0.125	0.125
+Stimulus.framesPerUp	3	3
+Stimulus.totalTime	1200	

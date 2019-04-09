@@ -1,0 +1,3 @@
+[submodule "utils/externals/LightCrafter"]
+	path = utils/externals/LightCrafter
+	url = git://github.com/mermerico/LightCrafter.git

@@ -1,0 +1,16 @@
+PARAMS	14																									
+EPOCHS	26																									
+Stimulus.epochName	Gray Interleave	Uncorrelated Bars	Gray Interleave	Left dt=1	Gray Interleave	Right dt=1	Gray Interleave	Left dt=2	Gray Interleave	Right dt=2	Gray Interleave	Left dt=3	Gray Interleave	Right dt=3	Gray Interleave	Left dt=4	Gray Interleave	Right dt=4	Gray Interleave	Left dt=5	Gray Interleave	Right dt=5	Gray Interleave	Left dt=6	Gray Interleave	Right dt=6
+Stimulus.stimtype	8	50006	8	8	8	8	8	8	8	8	8	8	8	8	8	8	8	8	8	8	8	8	8	8	8	8
+Stimulus.duration	150	300	150	300	150	300	150	300	150	300	150	300	150	300	150	300	150	300	150	300	150	300	150	300	150	300
+Stimulus.framesPerUp	6	3	3	6	6	6	6	6	6	6	6	6	6	6	6	6	6	6	6	6	6	6	6	6	6	6
+Stimulus.whichGlid	13	0	3	13	13	13	13	13	13	13	13	13	13	13	13	13	13	13	13	13	13	13	13	13	13	13
+Stimulus.updateRate	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60
+Stimulus.pixX	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5
+Stimulus.diagDirec	1	0	1	1	-1	-1	1	1	-1	-1	1	1	-1	-1	1	1	-1	-1	1	1	-1	-1	1	1	-1	-1
+Stimulus.pol	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.mLum	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.binarize	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.contrast	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1
+Stimulus.ordertype	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.varDt	1	1	1	1	1	1	2	2	2	2	3	3	3	3	4	4	4	4	5	5	5	5	6	6	6	6

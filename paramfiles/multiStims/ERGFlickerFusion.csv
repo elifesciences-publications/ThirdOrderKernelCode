@@ -1,0 +1,14 @@
+header,12,,,,,,,,,
+stimtype,30013,,,,,,,,,
+ordertype,0,,,,,,,,,
+totalTime,72000,,,,,,,,,
+duration,60,,,,,,,,,
+framesPerUp,24,,,,,,,,,
+numDeg,0,,,,,,,,,
+wavelengthDegrees,1,,,,,,,,,
+contrast,1,,,,,,,,,
+meanLuminance,0.5,,,,,,,,,
+blankTime,0,,,,,,,,,
+resetPhase,1,,,,,,,,,
+epochName,1Hz,2Hz,4Hz,8Hz,16Hz,32Hz,64Hz,128Hz,256Hz,512Hz
+velocityDegrees,-1,-2,-4,-8,-16,-32,-64,-128,-256,-512

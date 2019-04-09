@@ -1,0 +1,23 @@
+PARAMS	19												
+EPOCHS	2												
+Stimulus.epochName	Interleve	SineControlRight	SineControlLeft	Contrast 1 Right	Contrast 1 Left	Contrast 0.7 Right	Contrast 0.7 Left	Contrast 0.5 Right	Contrast 0.5 Left	Contrast 0.35 Right	Contrast 0.35 Left	Contrast 0.25 Right	Contrast 0.25 Left
+Stimulus.stimtype	10019	10019	10019	40013	40013	40013	40013	40013	40013	40013	40013	40013	40013
+Stimulus.ordertype	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.duration	300	15	15	300	300	300	300	300	300	300	300	300	300
+Stimulus.twoEyes	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.lum	0.5	0.5	0.5	1	1	1	1	1	1	1	1	1	1
+Stimulus.updateRate	0	0	0	30	30	30	30	30	30	30	30	30	30
+Stimulus.delay	0	0	0	1	1	1	1	1	1	1	1	1	1
+Stimulus.contrast	0	1	1	1	1	0.7	0.7	0.5	0.5	0.35	0.35	0.25	0.25
+Stimulus.phi	0	0	0	1	1	1	1	1	1	1	1	1	1
+Stimulus.dirX	0	0	0	1	-1	1	-1	1	-1	1	-1	1	-1
+Stimulus.dirY	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.numDegX	0	0	0	5	5	5	5	5	5	5	5	5	5
+Stimulus.numDegY	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.eyeDist	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.stripType	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.corrType	0	0	0	2	2	2	2	2	2	2	2	2	2
+Stimulus.framesPerUp	3	3	3	3	3	3	3	3	3	3	3	3	3
+Stimulus.numDeg	0	1	1	0	0	0	0	0	0	0	0	0	0
+Stimulus.temporalFrequency	0	16	-16	0	0	0	0	0	0	0	0	0	0
+Stimulus.lambda	30	30	30	0	0	0	0	0	0	0	0	0	0

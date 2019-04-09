@@ -1,0 +1,14 @@
+PARAMS	12			
+EPOCHS	1			
+Stimulus.stimtype	40006
+Stimulus.totalTime	10800
+Stimulus.ordertype	1
+Stimulus.duration	60
+Stimulus.stdv	.5
+Stimulus.lum	.5
+Stimulus.numDegX	0
+Stimulus.numDegY	0
+Stimulus.framesPerUp	3
+Stimulus.seed	1
+Stimulus.period	60
+Stimulus.flashRate 180

@@ -1,0 +1,50 @@
+0.6 mm from pcb to sensor base
+1.6 mm pcb thickness
+=1.0 mm from top of lens to bottom of pcb
+4.48 mm from top of lens to bottom of lens
+=3.48 mm from bottom of lens to bottom of pcb
+16.78 mm from center of aperture to back of lens
+0.5 inch from center of hole to front of sensor
+3.92 mm from center of aperture to front of sensor
+=8.78 mm from center of aperature to center of mount hole
+=8 mm from back of lens to center of mount hole
+16mm width of of lens
+0.35 inch from center of aperture to center of mount hole
+= 8.89mm
+drill diameter: 0.08661417
+13.22mm from aperture to front of lens
+30mm length of lens
+=16.78mm from aperture to back of lens
+=20.7mm from front of sensor to back of lens
+1.25 inch from front of sensor to center of post hole = 31mm
+=10.3mm from back of lens to center of post hole
+=20.7mm from back of lens to front of sensor
+
+mouse sensor board is 1 inch wide = 25.4mm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

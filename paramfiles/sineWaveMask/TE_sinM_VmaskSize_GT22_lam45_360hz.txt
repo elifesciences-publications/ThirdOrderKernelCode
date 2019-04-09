@@ -1,0 +1,31 @@
+PARAMS	29								
+EPOCHS	9								
+Stimulus.stimtype	10007	2	2	10007	10007	10007	10007	10007	10007
+Stimulus.ordertype	0	0	0	0	0	0	0	0	0
+Stimulus.duration	60	15	15	60	60	60	60	60	60
+Stimulus.lumL	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.lumR	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.contrastL	0	1	1	1	1	1	1	1	1
+Stimulus.contrastR	0	1	1	1	1	1	1	1	1
+Stimulus.twoEyes	0	0	0	1	1	1	1	1	1
+Stimulus.eyeDist	0	0	0	0	0	0	0	0	0
+Stimulus.stripType	0	0	0	0	0	0	0	0	0
+Stimulus.velocityL	0	480	-480	360	360	360	360	360	360
+Stimulus.velocityR	0	480	-480	-360	-360	-360	-360	-360	-360
+Stimulus.lambdaL	30	30	30	45	45	45	45	45	45
+Stimulus.lambdaR	30	30	30	45	45	45	45	45	45
+Stimulus.wnCL	0	0	0	0	0	0	0	0	0
+Stimulus.wnCR	0	0	0	0	0	0	0	0	0
+Stimulus.numDeg	1	1	1	1	1	1	1	1	1
+Stimulus.velSTDL	0	0	0	0	0	0	0	0	0
+Stimulus.velSTDR	0	0	0	0	0	0	0	0	0
+Stimulus.wnUpRateL	0	0	0	0	0	0	0	0	0
+Stimulus.wnUpRateR	0	0	0	0	0	0	0	0	0
+Stimulus.velUpRateL	1	1	1	1	1	1	1	1	1
+Stimulus.velUpRateR	1	1	1	1	1	1	1	1	1
+Stimulus.stimUpRateL	1	1	1	1	1	1	1	1	1
+Stimulus.stimUpRateR	1	1	1	1	1	1	1	1	1
+Stimulus.framesPerUp	6	6	6	6	6	6	6	6	6
+Stimulus.gridType	0	0	0	22	22	22	22	22	22
+Stimulus.maskSize	0	0	0	5	10	20	40	60	115
+Stimulus.numOffset	0	0	0	0	0	0	0	0	0

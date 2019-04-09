@@ -1,0 +1,29 @@
+PARAMS	27					
+EPOCHS	6					
+Stimulus.stimtype	26	26	26	26	26	26
+Stimulus.ordertype	1	1	1	1	1	1
+Stimulus.duration	180	60	180	60	180	60
+Stimulus.lumL	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.lumR	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.contrastL	1	0	1	0	1	0
+Stimulus.contrastR	1	0	1	0	1	0
+Stimulus.contFreqL	2	2	2	2	2	2
+Stimulus.contFreqR	2	2	2	2	2	2
+Stimulus.phaseOffsetL	0	0	20	0	90	0
+Stimulus.phaseOffsetR	0	0	20	0	90	0
+Stimulus.twoEyes	0	0	0	0	0	0
+Stimulus.eyeDist	20	20	20	20	20	20
+Stimulus.numDeg	5	5	5	5	5	5
+Stimulus.cfSTDL	0	0	0	0	0	0
+Stimulus.cfSTDR	0	0	0	0	0	0
+Stimulus.stimUpRateL	1	1	1	1	1	1
+Stimulus.stimUpRateR	1	1	1	1	1	1
+Stimulus.cfUpRateL	1	1	1	1	1	1
+Stimulus.cfUpRateR	1	1	1	1	1	1
+Stimulus.wnUpRateL	0	0	0	0	0	0
+Stimulus.wnUpRateR	0	0	0	0	0	0
+Stimulus.wnCL	0	0	0	0	0	0
+Stimulus.wnCR	0	0	0	0	0	0
+Stimulus.framesPerUp	3	3	3	3	3	3
+Stimulus.sameStructL	0	0	0	0	0	0
+Stimulus.sameStructR	0	0	0	0	0	0

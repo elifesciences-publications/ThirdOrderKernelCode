@@ -1,0 +1,22 @@
+PARAMS	17												
+EPOCHS	13												
+Stimulus.epochName	Gray Interleave	"R, 180 Hz"	"R, 60 Hz"	"R, 30 Hz"	"R, 15 Hz"	"R, 7.5 Hz"	"R, 1 Hz"	"L, 180 Hz"	"L, 60 Hz"	"L, 30 Hz"	"L, 15 Hz"	"L, 7.5 Hz"	"L, 1 Hz"
+Stimulus.stimtype	60022	60022	60022	60022	60022	60022	60022	60022	60022	60022	60022	60022	60022
+Stimulus.repeats	0	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.ordertype	4	4	4	4	4	4	4	4	4	4	4	4	4
+Stimulus.duration	300	300	300	300	300	300	300	300	300	300	300	300	300
+Stimulus.framesPerUp	3	3	3	3	3	3	3	3	3	3	3	3	3
+Stimulus.flickerFreq	30	180	60	30	15	7.5	1	180	60	30	15	7.5	1
+Stimulus.mLum	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.var	0	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4	0.4
+Stimulus.pixWd	360	360	360	360	360	360	360	360	360	360	360	360	360
+Stimulus.reseed	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.sinLambda	30	30	30	30	30	30	30	30	30	30	30	30	30
+Stimulus.sinFractAmpl	100	100	100	100	100	100	100	100	100	100	100	100	100
+Stimulus.sinOmega	2	2	2	2	2	2	2	-2	-2	-2	-2	-2	-2
+Stimulus.sineVar	0	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25	0.25
+Stimulus.flickerVar	0	0.75	0.75	0.75	0.75	0.75	0.75	0.75	0.75	0.75	0.75	0.75	0.75
+Stimulus.pixHt	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.fullField	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.sineUpdateFreq	180	180	180	180	180	180	180	180	180	180	180	180	180
+Stimulus.totalTime	39000												

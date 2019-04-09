@@ -1,0 +1,12 @@
+MATLAB SCONGRAD
+Michael Doo
+April 2011
+
+This is a MATLAB implementation of the scaled conjugate gradient algorithm
+by Nicolai Andrei. It was written and tested on MATLAB 2010b for OS X. 
+
+INSTALLATION\
+----------------------
+Simply place all the files in one directory and run scongrad_main.m. This 
+will test the performance of scongrad.m against MATLAB's fminunc function
+and write the output to a text file.

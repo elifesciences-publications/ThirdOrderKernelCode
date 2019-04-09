@@ -1,0 +1,10 @@
+PARAMS	29										
+EPOCHS	11										
+Stimulus.epochName	DARK										
+Stimulus.stimtype	40017	40017	40017	40017	40017	40017	40017	40017	40017	40017	40017
+Stimulus.ordertype	3	3	3	3	3	3	3	3	3	3	3
+Stimulus.duration	5	5	5	5	5	5	5	5	5	5	5
+Stimulus.lum	0	0.0391	0.0781	0.1172	0.1563	0.1953	0.2344	0.2734	0.3125	0.3516	0.3906
+Stimulus.numDeg	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.framesPerUp	3	3	3	3	3	3	3	3	3	3	3
+Stimulus.totalTime	120										

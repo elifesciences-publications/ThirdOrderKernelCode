@@ -1,0 +1,19 @@
+PARAMS	17														
+EPOCHS	15														
+Stimulus.stimtype	50011	50011	50011	50011	50011	50011	50011	50011	50011	50011	50011	50011	50011	50011	50011
+Stimulus.duration	30	30	30	30	30	30	30	30	30	30	30	30	30	30	30
+Stimulus.framesPerUp	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3
+Stimulus.updateRate	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60
+Stimulus.dotWd	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5
+Stimulus.dotHt	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5
+Stimulus.density	0	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03	0.03
+Stimulus.deltaX	1	1	-1	1	-1	1	-1	1	-1	1	-1	1	-1	1	-1
+Stimulus.deltaY	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.deltaT	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.mLum	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.tauBack	0	1	1	1	1	1	1	2	2	2	2	3	3	3	3
+Stimulus.cubeVal	0.5	0	0	-0.3	-0.3	0.3	0.3	-0.3	-0.3	0.3	0.3	-0.3	-0.3	0.3	0.3
+Stimulus.spaceBorder	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.val	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.dotsPol	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1
+Stimulus.dotsCorr	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1

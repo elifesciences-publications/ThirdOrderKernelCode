@@ -1,0 +1,17 @@
+PARAMS	22	
+EPOCHS	8	
+Stimulus.epochName	interleave	interleave
+Stimulus.stimtype	10031	10031
+Stimulus.ordertype	1	1
+Stimulus.duration	60	3000
+Stimulus.twoEyes	0	0
+Stimulus.updateRate	30	30
+Stimulus.dx	[]	[0 1]
+Stimulus.dy	[]	[0 0]
+Stimulus.dt	[]	[1 1]
+Stimulus.parity	1	1
+Stimulus.numDegX	5	5
+Stimulus.numDegY	5	5
+Stimulus.eyeDist	0	0
+Stimulus.framesPerUp	3	3
+Stimulus.c	1	1

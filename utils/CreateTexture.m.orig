@@ -1,0 +1,94 @@
+function tex = CreateTexture(bitMap,Q)
+    % image gets transposed and flipped vertically due to reflections and
+    % the fact that openGL is in a right handed coordinate system. so
+    % always rotrate 90 deg clockwise to counteract -MSC    
+    
+    if Q.windowIDs.active == Q.windowIDs.pano
+        framesPerUp = Q.stims.currParam.framesPerUp;
+    else if isfield(Q.stims.currParam,'flatFramesPerUp')
+            framesPerUp = Q.stims.currParam.flatFramesPerUp;
+        else
+            framesPerUp = 12;
+        end
+    end
+    
+    %make sure no bytes wrap around
+    bitMap(bitMap>1) = 1;
+    bitMap(bitMap<0) = 0; 
+    outMap(size(bitMap,2),size(bitMap,1),4) = 0;
+    
+    %%%%%% THIS ONLY WORKS IF framesPerUp IS DIVISIBLE BY 3
+    % bitDepth 7 (essentially 8 bit) 4bit 2bit and 1bit
+    % number of frames per color rgb. Its also not necessary if framesPerUp
+    % = 3
+    if framesPerUp ~= 3
+        
+        fpc = framesPerUp/3;
+        % puts the bitMap into values between 0 and the bitsize
+        
+        nBitMap = round(bitMap*(2^(8/fpc)-1));
+        %wBitMap = zeros([size(nBitMap) 1 1 1]);
+        weights = repmat(2.^(0:8/fpc:7),[1 3]);
+        weights = permute(weights,[1 3 2]);
+        
+        % weight the matrix so that the bits are properly shifted
+        wBitMap = bsxfun(@times,nBitMap,weights);
+        
+        if Q.stims.movie && Q.windowIDs.active == Q.windowIDs.pano
+            write_movie(nBitMap,Q);
+        end
+        
+        if Q.stims.xtPlot && Q.windowIDs.active == Q.windowIDs.pano
+            WriteXtPlot(nBitMap(1,:,:),Q);
+        end
+        
+        % now that the bits are aligned simply sum them together
+        for ii = 1:3
+            outMap(:,:,ii) = rot90(sum(wBitMap(:,:,(ii-1)*fpc+1:ii*fpc),3),3);
+        end
+    else
+<<<<<<< HEAD
+        if Q.stims.xtPlot && Q.windowIDs.active == Q.windowIDs.pano
+            WriteXtPlot(bitMap(1,:,:),Q);
+        end
+=======
+>>>>>>> master
+        
+        
+        if Q.stims.movie && Q.windowIDs.active == Q.windowIDs.pano
+            WriteMovie(bitMap,Q);
+        end
+        
+        bitMap = bitMap*255;
+        
+        if Q.stims.xtPlot
+            WriteXtPlot(bitMap(1,:,:),Q);
+        end
+        
+        for ii = 1:3
+            outMap(:,:,ii) = rot90(bitMap(:,:,ii),3);
+        end
+    end
+    
+    
+    % add alpha values to outMap. They won't be used but they keep
+    % makeTexture from converting the format, slowing down, and droping
+    % frames.
+    repX = ceil(size(outMap,2)/2);
+    repY = size(outMap,1);
+    if Q.windowIDs.active == Q.windowIDs.pano
+        alpha = repmat([100 200],[repY,repX]);
+        outMap(:,:,4) = alpha(:,1:size(outMap,2));
+    else
+        outMap(:,:,4) = 255;
+    end
+    
+    % put bitMap in the right order
+    if ~isfield(Q,'lightCrafter4500') || Q.windowIDs.active == Q.windowIDs.pano
+        outMap = outMap(:,:,[2 3 1 4]);
+    else
+        outMap = outMap(:,:,[2 1 3 4]);
+    end
+    
+    tex = Screen('MakeTexture', Q.windowIDs.active, outMap, [], 1);
+end

@@ -1,0 +1,13 @@
+PARAMS	11	
+EPOCHS	2	
+Stimulus.epochName	On	Off
+Stimulus.stimtype	40008	40008
+Stimulus.ordertype	-1	-1
+Stimulus.repeats	64	64
+Stimulus.nextEpoch	2	1
+Stimulus.duration	15	15
+Stimulus.period	15	15
+Stimulus.numDeg	20	20
+Stimulus.framesPerUp	3	3
+Stimulus.dutyCycle	1	0
+Stimulus.totalTime	1920	

@@ -1,0 +1,31 @@
+PARAMS	29																						
+EPOCHS	23																						
+Stimulus.stimtype	35	2	2	35	35	35	35	35	35	35	35	35	35	35	35	35	35	35	35	35	35	35	35
+Stimulus.ordertype	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.duration	60	15	15	30	30	30	30	30	30	30	30	30	30	30	30	30	30	30	30	30	30	30	30
+Stimulus.lumL	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.lumR	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.contrastL	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.contrastR	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.velocityL	360	480	-480	180	-180	360	-360	720	-720	900	-900	1440	-1440	2025	-2025	2880	-2880	4050	-4050	5760	-5760	8100	-8100
+Stimulus.velocityR	360	480	-480	180	-180	360	-360	720	-720	900	-900	1440	-1440	2025	-2025	2880	-2880	4050	-4050	5760	-5760	8100	-8100
+Stimulus.lambdaL	1	30	30	45	45	45	45	45	45	45	45	45	45	45	45	45	45	45	45	45	45	45	45
+Stimulus.lambdaR	1	30	30	45	45	45	45	45	45	45	45	45	45	45	45	45	45	45	45	45	45	45	45
+Stimulus.twoEyes	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.eyeDist	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.numDeg	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.velSTDL	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.velSTDR	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.stimUpRateL	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.stimUpRateR	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.velUpRateL	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.velUpRateR	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.wnUpRateL	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.wnUpRateR	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.wnCL	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.wnCR	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.framesPerUp	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12	12
+Stimulus.CLmapType	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.gainL	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.gainR	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.stripType	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0

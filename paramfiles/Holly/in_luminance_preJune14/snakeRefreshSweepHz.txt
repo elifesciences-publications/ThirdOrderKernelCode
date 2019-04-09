@@ -1,0 +1,27 @@
+PARAMS	25								
+EPOCHS	9								
+Stimulus.stimtype	10	2	2	10	10	10	10	10	10
+Stimulus.duration	120	15	15	60	60	60	60	60	60
+Stimulus.lo	0	0	0	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.hi	0	0	0	1	1	1	1	1	1
+Stimulus.pixSizeX	5	0	0	5	5	5	5	5	5
+Stimulus.pixSizeY	5	0	0	5	5	5	5	5	5
+Stimulus.rowHt	3	0	0	3	3	3	3	3	3
+Stimulus.spaceHt	1	0	0	1	1	1	1	1	1
+Stimulus.whichWay	1	0	0	1	2	1	2	1	2
+Stimulus.bgVal	0.5	0	0	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.refreshHz	1	0	0	5	5	10	10	18	18
+Stimulus.patType	2	0	0	1	1	1	1	1	1
+Stimulus.lumL	0	0.5	0.5	0	0	0	0	0	0
+Stimulus.lumR	0	0.5	0.5	0	0	0	0	0	0
+Stimulus.contrastL	0	1	1	0	0	0	0	0	0
+Stimulus.contrastR	0	1	1	0	0	0	0	0	0
+Stimulus.rot.meanL	0	480	-480	0	0	0	0	0	0
+Stimulus.rot.meanR	0	480	-480	0	0	0	0	0	0
+Stimulus.spacingL	0	30	30	0	0	0	0	0	0
+Stimulus.spacingR	0	30	30	0	0	0	0	0	0
+Stimulus.twoEyes	0	0	0	0	0	0	0	0	0
+Stimulus.eyeDist	0	0	0	0	0	0	0	0	0
+Stimulus.noisePerL	0	0	0	0	0	0	0	0	0
+Stimulus.noisePerR	0	0	0	0	0	0	0	0	0
+Stimulus.numDeg	0	5	5	0	0	0	0	0	0

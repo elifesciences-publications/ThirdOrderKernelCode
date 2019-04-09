@@ -1,0 +1,36 @@
+PARAMS	34		
+EPOCHS	3		
+Stimulus.epochName	Gray Interleave	Flicker	Sine Wave
+Stimulus.stimtype	40006	60010	60012
+Stimulus.ordertype	1	1	1
+Stimulus.duration	300	300	300
+Stimulus.stdv	0	[0 0.1 0.2 0.5 1]	0
+Stimulus.lum	0	0.5	0
+Stimulus.numDegX	0	0	0
+Stimulus.numDegY	0	0	0
+Stimulus.framesPerUp	3	3	3
+Stimulus.seed	0	0	0
+Stimulus.period	60	60	0
+Stimulus.flashRate	60	60	0
+Stimulus.lumL	0	0	0.5
+Stimulus.lumR	0	0	0.5
+Stimulus.contrastL	0	0	0.3
+Stimulus.contrastR	0	0	0.3
+Stimulus.twoEyes	0	0	0
+Stimulus.eyeDist	0	0	0
+Stimulus.stripType	0	0	0
+Stimulus.velocityL	0	0	30
+Stimulus.velocityR	0	0	30
+Stimulus.lambdaL	0	0	30
+Stimulus.lambdaR	0	0	30
+Stimulus.wnCL	0	0	0
+Stimulus.wnCR	0	0	0
+Stimulus.numDeg	0	0	1
+Stimulus.velSTDR	0	0	0
+Stimulus.velSTDL	0	0	0
+Stimulus.wnUpRateL	0	0	0
+Stimulus.wnUpRateR	0	0	0
+Stimulus.velUpRateL	0	0	1
+Stimulus.velUpRateR	0	0	1
+Stimulus.stimUpRateL	0	0	1
+Stimulus.stimUpRateR	0	0	1

@@ -1,0 +1,19 @@
+PARAMS	22														
+EPOCHS	8														
+Stimulus.totalTime	47040														
+Stimulus.epochName	Interleave	Unc	Unc	Con R+	Con L+	Con R-	Con L-	Div R+	Div L+	Div R-	Div L-	2PR+	2PL+	2PR-	2PL-
+Stimulus.stimtype	10029	10029	10029	10029	10029	10029	10029	10029	10029	10029	10029	10029	10029	10029	10029
+Stimulus.ordertype	4	4	4	4	4	4	4	4	4	4	4	4	4	4	4
+Stimulus.repeats	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.duration	240	240	240	240	240	240	240	240	240	240	240	240	240	240	240
+Stimulus.twoEyes	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.updateRate	20	20	20	20	20	20	20	20	20	20	20	20	20	20	20
+Stimulus.dx	[]	[]	[]	[1 1]	-[1 1]	[1 1]	-[1 1]	[0 1]	-[0 1]	[0 1]	-[0 1]	[1]	-[1]	[1]	-[1]
+Stimulus.dy	[]	[]	[]	[0 0]	[0 0]	[0 0]	[0 0]	[0 0]	[0 0]	[0 0]	[0 0]	[0]	[0]	[0]	[0]
+Stimulus.dt	[]	[]	[]	[0 1]	[0 1]	[0 1]	[0 1]	[1 1]	[1 1]	[1 1]	[1 1]	[1]	[1]	[1]	[1]
+Stimulus.parity	1	1	1	1	1	-1	-1	1	1	-1	-1	1	1	-1	-1
+Stimulus.numDegX	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5
+Stimulus.numDegY	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.eyeDist	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.framesPerUp	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3
+Stimulus.c	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1

@@ -1,0 +1,35 @@
+PARAMS  33                
+EPOCHS  9                
+Stimulus.stimtype  50005  2  2  50005  50005  50005  50005  50005  50005
+Stimulus.duration  30  15  15  30  30  30  30  30  30
+Stimulus.framesPerUp  3  3  3  3  3  3  3  3  3
+Stimulus.updateRate 60	60	60	60	60	60	60	60	60
+Stimulus.mLum  0.5  0  0  0.5  0.5  0.5  0.5  0.5  0.5
+Stimulus.var  0  0  0  1  1  1  1  1  1
+Stimulus.scintWd  0  0  0  1  1  1  1  1  1
+Stimulus.uncorrWd  3  0  0  2  2  2  2  2  2
+Stimulus.binarize  1  0  0  1  1  1  1  1  1
+Stimulus.maskVel  0  0  0  300  -300  -300  300  0  0
+Stimulus.dx  1  0  0  1  -1  1  -1  1  -1
+Stimulus.dt  1  0  0  1  1  1  1  1  1
+Stimulus.pixX  5  0  0  5  5  5  5  5  5
+Stimulus.lumL  0  0.5  0.5  0  0  0  0  0  0
+Stimulus.lumR  0  0.5  0.5  0  0  0  0  0  0
+Stimulus.contrastL  0  1  1  0  0  0  0  0  0
+Stimulus.contrastR  0  1  1  0  0  0  0  0  0
+Stimulus.twoEyes  0  0  0  0  0  0  0  0  0
+Stimulus.velocityL  0  480  -480  0  0  0  0  0  0
+Stimulus.velocityR  0  480  -480  0  0  0  0  0  0
+Stimulus.lambdaL  0  30  30  0  0  0  0  0  0
+Stimulus.lambdaR  0  30  30  0  0  0  0  0  0
+Stimulus.wnCL  0  0  0  0  0  0  0  0  0
+Stimulus.wnCR  0  0  0  0  0  0  0  0  0
+Stimulus.numDeg  0  5  5  0  0  0  0  0  0
+Stimulus.velSTDL  0  0  0  0  0  0  0  0  0
+Stimulus.velSTDR  0  0  0  0  0  0  0  0  0
+Stimulus.wnUpRateL  0  0  0  0  0  0  0  0  0
+Stimulus.wnUpRateR  0  0  0  0  0  0  0  0  0
+Stimulus.velUpRateL  0  1  1  0  0  0  0  0  0
+Stimulus.velUpRateR  0  1  1  0  0  0  0  0  0
+Stimulus.stimUpRateL  0  1  1  0  0  0  0  0  0
+Stimulus.stimUpRateR  0  1  1  0  0  0  0  0  0

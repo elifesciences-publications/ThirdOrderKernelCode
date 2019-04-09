@@ -1,0 +1,10 @@
+PARAMS	29	
+EPOCHS	2	
+Stimulus.epochName	GRAY	OFF
+Stimulus.stimtype	40017	40017
+Stimulus.ordertype	1	1
+Stimulus.duration	60	300
+Stimulus.lum	1	0
+Stimulus.numDeg	0	0
+Stimulus.framesPerUp	3	3
+Stimulus.totalTime	1800	

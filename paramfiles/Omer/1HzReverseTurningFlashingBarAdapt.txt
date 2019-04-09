@@ -1,0 +1,22 @@
+PARAMS	13																		
+EPOCHS	11																		
+Stimulus.stimtype	10019	10019	10019	30014	10019	30014	10019	30014	10019	30014	10019	30014	10019	30014	10019	30014	10019	30014	10019
+Stimulus.ordertype	5	0	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0
+Stimulus.duration	300	15	15	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300	300
+Stimulus.lum	0.5	0.5	0.5	0	0.5	0	0.5	0	0.5	0	0.5	0	0.5	0	0.5	0	0.5	0	0.5
+Stimulus.contrast	0	1	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1
+Stimulus.twoEyes	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.eyeDist	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.stripType	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.temporalFrequency	4	16	-16	0	1	0	-1	0	1	0	-1	0	1	0	-1	0	1	0	-1
+Stimulus.lambda	60	30	30	0	60	0	60	0	60	0	60	0	60	0	60	0	60	0	60
+Stimulus.numDeg	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.framesPerUp	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3
+Stimulus.entryPoint	0	1	1	1	0	1	0	1	0	1	0	1	0	1	0	1	0	1	0
+Stimulus.backgroundLum	0	0	0	0.5	0	0.5	0	0.5	0	0.5	0	0.5	0	0.5	0	0.5	0	0.5	0
+Stimulus.barMeanLum	0	0	0	0	0	0	0	0	0	0	0	0.5	0	0.5	0	0.5	0	0.5	0
+Stimulus.barContrast	0	0	0	0	0	0	0	0	0	0	0	1	0	1	0	1	0	1	0
+Stimulus.barTemporalFrequency	0	0	0	0	0	0	0	0	0	0	0	10	0	10	0	10	0	10	0
+Stimulus.velDeg	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.widthDeg	0	0	0	10	0	10	0	10	0	10	0	10	0	10	0	10	0	10	0
+Stimulus.startingLocDeg	0	0	0	270	0	90	0	90	0	270	0	270	0	90	0	90	0	270	0

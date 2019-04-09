@@ -1,0 +1,30 @@
+PARAMS	28												
+EPOCHS	13												
+Stimulus.epochName	Gray Inverleave	"R, C = 0.1"	"R, C = 0.2"	"R, C = 0.4"	"R, C = 0.6"	"R, C = 0.75"	"R, C = 1"	"L, C = 0.1"	"L, C = 0.2"	"L, C = 0.4"	"L, C = 0.6"	"L, C = 0.75"	"L, C = 1"
+Stimulus.stimtype	2	2	2	2	2	2	2	2	2	2	2	2	2
+Stimulus.ordertype	4	4	4	4	4	4	4	4	4	4	4	4	4
+Stimulus.repeats	0	4	4	4	4	4	4	4	4	4	4	4	4
+Stimulus.duration	180	300	300	300	300	300	300	300	300	300	300	300	300
+Stimulus.lumL	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.lumR	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.contrastL	0	0.1	0.2	0.4	0.6	0.75	1	0.1	0.2	0.4	0.6	0.75	1
+Stimulus.contrastR	0	0.1	0.2	0.4	0.6	0.75	1	0.1	0.2	0.4	0.6	0.75	1
+Stimulus.velocityL	120	120	120	120	120	120	120	-120	-120	-120	-120	-120	-120
+Stimulus.velocityR	120	120	120	120	120	120	120	-120	-120	-120	-120	-120	-120
+Stimulus.lambdaL	30	30	30	30	30	30	30	30	30	30	30	30	30
+Stimulus.lambdaR	30	30	30	30	30	30	30	30	30	30	30	30	30
+Stimulus.twoEyes	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.eyeDist	20	20	20	20	20	20	20	20	20	20	20	20	20
+Stimulus.numDeg	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.velSTDL	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.velSTDR	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.stimUpRateL	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.stimUpRateR	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.velUpRateL	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.velUpRateR	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.wnUpRateL	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.wnUpRateR	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.wnCL	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.wnCR	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.framesPerUp	3	3	3	3	3	3	3	3	3	3	3	3	3
+Stimulus.totalTime	28800												

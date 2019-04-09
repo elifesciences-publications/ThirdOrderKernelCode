@@ -1,0 +1,8 @@
+PARAMS	6
+EPOCHS	1
+Stimulus.stimtype	40008
+Stimulus.duration	360
+Stimulus.period	120
+Stimulus.numDeg	20
+Stimulus.framesPerUp	3
+Stimulus.dutyCycle	.5

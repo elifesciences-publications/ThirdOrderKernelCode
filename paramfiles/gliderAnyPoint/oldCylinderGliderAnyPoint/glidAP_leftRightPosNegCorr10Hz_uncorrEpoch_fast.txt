@@ -1,0 +1,35 @@
+PARAMS	33					
+EPOCHS	6					
+Stimulus.epochName	Gray Interleave	Uncorrelated Bars	10Hz L+	10Hz R-	10Hz L-	10Hz R+
+Stimulus.stimtype	41	50006	41	41	41	41
+Stimulus.ordertype	4	4	4	4	4	4
+Stimulus.repeats	100	100	100	100	100	100
+Stimulus.duration	60	60	60	60	60	60
+Stimulus.twoEyes	0	0	0	0	0	0
+Stimulus.updateL	18	0	18	18	18	18
+Stimulus.updateR	18	0	18	18	18	18
+Stimulus.delayL	1	0	1	1	1	1
+Stimulus.delayR	1	0	1	1	1	1
+Stimulus.corrSignL	1	0	1	-1	-1	1
+Stimulus.corrSignR	1	0	1	-1	-1	1
+Stimulus.dirXL	1	0	1	-1	1	-1
+Stimulus.dirXR	1	0	1	-1	1	-1
+Stimulus.dirYL	0	0	0	0	0	0
+Stimulus.dirYR	0	0	0	0	0	0
+Stimulus.numDegX	5	0	5	5	5	5
+Stimulus.numDegY	0	0	0	0	0	0
+Stimulus.eyeDist	0	0	0	0	0	0
+Stimulus.framesPerUp	3	3	3	3	3	3
+Stimulus.cL	0	0	1	1	1	1
+Stimulus.cR	0	0	1	1	1	1
+Stimulus.corrTypeL	2	0	2	2	2	2
+Stimulus.corrTypeR	2	0	2	2	2	2
+Stimulus.whichGlid	0	0				
+Stimulus.updateRate	0	10				
+Stimulus.pixX	0	5				
+Stimulus.diagDirec	0	0				
+Stimulus.pol	0	1				
+Stimulus.mLum	0	0.5				
+Stimulus.binarize	0	1				
+Stimulus.contrast	0	1				
+Stimulus.totalTime	60000					

@@ -1,0 +1,31 @@
+PARAMS	29																			
+EPOCHS	20																			
+Stimulus.stimtype	10007	2	2	10007	10007	10007	10007	10007	10007	10007	10007	10007	10007	10007	10007	10007	10007	10007	10007	10007
+Stimulus.ordertype	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.duration	60	15	15	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60
+Stimulus.lumL	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.lumR	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.contrastL	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.contrastR	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.twoEyes	0	0	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.eyeDist	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.stripType	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.velocityL	0	480	-480	15	22.5	30	45	60	90	120	180	240	360	480	720	960	1440	1920	2880	3840
+Stimulus.velocityR	0	480	-480	-15	-22.5	-30	-45	-60	-90	-120	-180	-240	-360	-480	-720	-960	-1440	-1920	-2880	-3840
+Stimulus.lambdaL	30	30	30	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60
+Stimulus.lambdaR	30	30	30	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60
+Stimulus.wnCL	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.wnCR	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.numDeg	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2
+Stimulus.velSTDL	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.velSTDR	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.wnUpRateL	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.wnUpRateR	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.velUpRateL	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.velUpRateR	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.stimUpRateL	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.stimUpRateR	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.framesPerUp	6	6	6	6	6	6	6	6	6	6	6	6	6	6	6	6	6	6	6	6
+Stimulus.gridType	0	0	0	22	22	22	22	22	22	22	22	22	22	22	22	22	22	22	22	22
+Stimulus.maskSize	0	0	0	20	20	20	20	20	20	20	20	20	20	20	20	20	20	20	20	20
+Stimulus.numOffset	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0

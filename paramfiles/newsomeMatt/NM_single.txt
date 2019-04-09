@@ -1,0 +1,27 @@
+PARAMS	25	
+EPOCHS	2	
+Stimulus.stimtype	10006	10006
+Stimulus.ordertype	1	1
+Stimulus.duration	60	60
+Stimulus.twoEyes	0	0
+Stimulus.lumL	0.5	0.5
+Stimulus.lumR	0.5	0.5
+Stimulus.updateL	1	1
+Stimulus.updateR	1	1
+Stimulus.delayL	1	1
+Stimulus.delayR	1	1
+Stimulus.cL	0.5	0.5
+Stimulus.cR	0.5	0.5
+Stimulus.phiL	1	-1
+Stimulus.phiR	1	-1
+Stimulus.dirXL	1	1
+Stimulus.dirXR	1	1
+Stimulus.dirYL	0	0
+Stimulus.dirYR	0	0
+Stimulus.numDegX	5	5
+Stimulus.numDegY	5	5
+Stimulus.eyeDist	0	0
+Stimulus.densityL	1	1
+Stimulus.densityR	1	1
+Stimulus.timeRand	1	1
+Stimulus.framesPerUp	3	3

@@ -1,0 +1,12 @@
+PARAMS	10
+EPOCHS	1
+Stimulus.stimtype	50020
+Stimulus.duration	1200
+Stimulus.framesPerUp	3
+Stimulus.flickerFreq	60
+Stimulus.mLum	0.5
+Stimulus.var	1
+Stimulus.distribution	2
+Stimulus.barWd	5
+Stimulus.reseed	1
+Stimulus.numBars	54

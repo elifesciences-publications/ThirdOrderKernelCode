@@ -1,0 +1,45 @@
+PARAMS	43								
+EPOCHS	31								
+Stimulus.epochName	Interleve	Control Pos	Control Neg	Both Positive	Both Negative	Right Progressive	Left Progressive	Right Regressive	Left Regressive
+Stimulus.stimtype	10006	2	2	10006	10006	10006	10006	10006	10006
+Stimulus.ordertype	0	0	0	0	0	0	0	0	0
+Stimulus.duration	300	15	15	300	300	300	300	300	300
+Stimulus.twoEyes	1	1	1	1	1	1	1	1	1
+Stimulus.lumL	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.lumR	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.updateL	6	0	0	6	6	6	6	6	6
+Stimulus.updateR	6	0	0	6	6	6	6	6	6
+Stimulus.delayL	0	0	0	1	1	1	1	1	1
+Stimulus.delayR	0	0	0	1	1	1	1	1	1
+Stimulus.cL	1	0	0	1	1	1	1	1	1
+Stimulus.cR	1	0	0	1	1	1	1	1	1
+Stimulus.phiL	1	0	0	1	1	1	1	1	1
+Stimulus.phiR	1	0	0	1	1	1	1	1	1
+Stimulus.dirXL	0	0	0	1	-1	0	-1	0	1
+Stimulus.dirXR	0	0	0	1	-1	1	0	-1	0
+Stimulus.dirYL	0	0	0	0	0	0	0	0	0
+Stimulus.dirYR	0	0	0	0	0	0	0	0	0
+Stimulus.numDegX	5	0	0	5	5	5	5	5	5
+Stimulus.numDegY	5	0	0	5	5	5	5	5	5
+Stimulus.eyeDist	0	0	0	0	0	0	0	0	0
+Stimulus.timeRand	1	0	0	1	1	1	1	1	1
+Stimulus.densityL	1	0	0	1	1	1	1	1	1
+Stimulus.densityR	1	0	0	1	1	1	1	1	1
+Stimulus.framesPerUp	3	3	3	3	3	3	3	3	3
+Stimulus.contrastL	0	1	1	0	0	0	0	0	0
+Stimulus.contrastR	0	1	1	0	0	0	0	0	0
+Stimulus.velocityL	0	480	-480	0	0	0	0	0	0
+Stimulus.velocityR	0	480	-480	0	0	0	0	0	0
+Stimulus.lambdaL	0	30	30	0	0	0	0	0	0
+Stimulus.lambdaR	0	30	30	0	0	0	0	0	0
+Stimulus.wnCL	0	0	0	0	0	0	0	0	0
+Stimulus.wnCR	0	0	0	0	0	0	0	0	0
+Stimulus.numDeg	0	5	5	0	0	0	0	0	0
+Stimulus.velSTDL	0	0	0	0	0	0	0	0	0
+Stimulus.velSTDR	0	0	0	0	0	0	0	0	0
+Stimulus.wnUpRateL	0	0	0	0	0	0	0	0	0
+Stimulus.wnUpRateR	0	0	0	0	0	0	0	0	0
+Stimulus.velUpRateL	0	1	1	0	0	0	0	0	0
+Stimulus.velUpRateR	0	1	1	0	0	0	0	0	0
+Stimulus.stimUpRateL	0	1	1	0	0	0	0	0	0
+Stimulus.stimUpRateR	0	1	1	0	0	0	0	0	0

@@ -1,0 +1,10 @@
+PARAMS	29	
+EPOCHS	2	
+Stimulus.epochName	ON	OFF
+Stimulus.stimtype	40018	40018
+Stimulus.ordertype	1	1
+Stimulus.duration	300	300
+Stimulus.lum	1	0
+Stimulus.numDeg	0	0
+Stimulus.framesPerUp	3	3
+Stimulus.totalTime	6000	

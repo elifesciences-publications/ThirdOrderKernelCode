@@ -1,0 +1,22 @@
+PARAMS	20
+EPOCHS	2
+Stimulus.stimtype	49	49
+Stimulus.stimtype1	47	47
+Stimulus.stimtype2	48	48
+Stimulus.ordertype	1	1
+Stimulus.duration	120	120
+Stimulus.adaptDur	60	60
+Stimulus.lumL	0.5	0.5
+Stimulus.lumR	0.5	0.5
+Stimulus.contrastL	-1	-1
+Stimulus.contrastR	-1	-1
+Stimulus.velocityL	100	240
+Stimulus.velocityR	50	50
+Stimulus.numDeg	1	1
+Stimulus.polL	1	1
+Stimulus.polR	1	1
+Stimulus.wnCL	0	0
+Stimulus.wnCR	0	0
+Stimulus.framesPerUp	3	3
+Stimulus.numBars	6	6
+Stimulus.numBars2        5	5

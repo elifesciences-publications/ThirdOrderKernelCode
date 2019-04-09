@@ -1,0 +1,23 @@
+PARAMS	12						
+EPOCHS	15						
+Stimulus.stimtype	30004	30004	30004	30004	30004	30004	30004
+Stimulus.ordertype	0	0	0	0	0	0	0
+Stimulus.duration	300	15	15	300	300	300	300
+Stimulus.numDeg	2.5	2.5	2.5	2.5	2.5	2.5	2.5
+Stimulus.framesPerUp	12	12	12	12	12	12	12
+Stimulus.meanLuminanceRed	0	0	0	0	0	0	0
+Stimulus.meanLuminanceGreen	0.5	0.5	0.5	0.5	0.5	0	0
+Stimulus.meanLuminanceBlue	0.5	0.5	0.5	0	0	0.5	0.5
+Stimulus.contrastRed	0	1	1	1	1	1	1
+Stimulus.contrastGreen	0	1	1	1	1	1	1
+Stimulus.contrastBlue	0	1	1	1	1	1	1
+Stimulus.wavelengthDegreesRed	60	30	30	60	60	60	60
+Stimulus.wavelengthDegreesGreen	60	30	30	60	60	60	60
+Stimulus.wavelengthDegreesBlue	60	30	30	60	60	60	60
+Stimulus.velocityDegreesRed	60	30	-30	60	-60	60	-60
+Stimulus.velocityDegreesGreen	60	30	-30	60	-60	60	-60
+Stimulus.velocityDegreesBlue	60	30	-30	60	-60	60	-60
+Stimulus.phaseDegreesRed	0	0	0	0	0	0	0
+Stimulus.phaseDegreesGreen	0	0	0	0	0	0	0
+Stimulus.phaseDegreesBlue	0	0	0	0	0	0	0
+Stimulus.lightcrafterColor	1	1	1	1	1	1	1

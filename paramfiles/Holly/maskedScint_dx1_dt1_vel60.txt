@@ -1,0 +1,1 @@
+PARAMS	13EPOCHS	1Stimulus.stimtype	50005Stimulus.duration	600Stimulus.framesPerUp	3Stimulus.updateRate	180Stimulus.mLum	0.5Stimulus.var	1Stimulus.scintWd	3Stimulus.uncorrWd	3Stimulus.binarize	1Stimulus.maskVel	0Stimulus.dx	1Stimulus.dt	1Stimulus.pixX	5

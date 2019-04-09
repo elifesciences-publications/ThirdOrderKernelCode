@@ -1,0 +1,19 @@
+PARAMS	15					
+EPOCHS	4					
+Stimulus.stimtype	60025	60025	60025	60025	40008	40008
+Stimulus.epochName	Down Bar	Up Bar	Right Bar	Left Bar	On	Off
+Stimulus.ordertype	-1	-1	-1	-1	-1	-1
+Stimulus.repeats	1	1	1	1	6	6
+Stimulus.nextEpoch	2	3	4	1	6	5
+Stimulus.duration	720	720	720	720	120	120
+Stimulus.lum	0.5	0.5	0.5	0.5		
+Stimulus.vel	30	-30	30	-30		
+Stimulus.lambda	30	30	30	30		
+Stimulus.numDeg	1	1	1	1	20	20
+Stimulus.framesPerUp	3	3	3	3	3	3
+Stimulus.direction	0	180	0	180		
+Stimulus.width	5	5	5	5		
+Stimulus.period					120	120
+Stimulus.dutyCycle					1	0
+Stimulus.updown	1	1	0	0		
+Stimulus.totalTime	7200					

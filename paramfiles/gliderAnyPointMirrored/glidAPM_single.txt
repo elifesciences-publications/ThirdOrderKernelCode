@@ -1,0 +1,16 @@
+PARAMS	22
+EPOCHS	8
+Stimulus.stimtype	10028
+Stimulus.ordertype	0
+Stimulus.duration	300
+Stimulus.twoEyes	0
+Stimulus.updateRate	30
+Stimulus.dx	[1 1 2]
+Stimulus.dy	[0 0 0]
+Stimulus.dt	[-1 1 0]
+Stimulus.parity	1
+Stimulus.numDegX	5
+Stimulus.numDegY	0
+Stimulus.eyeDist	0
+Stimulus.framesPerUp	3
+Stimulus.c	1

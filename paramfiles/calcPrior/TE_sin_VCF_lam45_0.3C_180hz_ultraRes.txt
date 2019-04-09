@@ -1,0 +1,28 @@
+PARAMS	26																	
+EPOCHS	18																	
+Stimulus.stimtype	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2
+Stimulus.ordertype	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.duration	60	15	15	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60
+Stimulus.lumL	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.lumR	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.contrastL	0	1	1	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3
+Stimulus.contrastR	0	1	1	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3	0.3
+Stimulus.twoEyes	0	0	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.eyeDist	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.stripType	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.velocityL	0	480	-480	45	53.51432018	63.63961031	75.68067737	90	107.0286404	127.2792206	151.3613547	180	214.0572807	254.5584412	302.7227095	360	428.1145614	509.1168825
+Stimulus.velocityR	0	480	-480	-46	-54.70352729	-65.05382387	-77.3624702	-92	-109.4070546	-130.1076477	-154.7249404	-184	-218.8141092	-260.2152955	-309.4498808	-368	-437.6282183	-520.430591
+Stimulus.lambdaL	30	30	30	45	45	45	45	45	45	45	45	45	45	45	45	45	45	45
+Stimulus.lambdaR	30	30	30	45	45	45	45	45	45	45	45	45	45	45	45	45	45	45
+Stimulus.wnCL	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.wnCR	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.numDeg	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.velSTDL	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.velSTDR	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.wnUpRateL	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.wnUpRateR	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.velUpRateL	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.velUpRateR	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.stimUpRateL	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.stimUpRateR	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.framesPerUp	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3

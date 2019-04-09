@@ -1,0 +1,15 @@
+<<<<<<< HEAD
+PARAMS	9
+EPOCHS	1
+Stimulus.stimtype	50017
+Stimulus.duration	60
+Stimulus.framesPerUp	6
+Stimulus.flickerFreq	60
+Stimulus.mLum	0.5
+Stimulus.var	1
+Stimulus.pixWd	5
+Stimulus.reseed	1
+Stimulus.totalTime	54000
+=======
+PARAMS	8EPOCHS	1Stimulus.stimtype	50017Stimulus.duration	60Stimulus.framesPerUp	6Stimulus.flickerFreq	60Stimulus.mLum	0.5Stimulus.var	1Stimulus.pixWd	5Stimulus.reseed	0
+>>>>>>> d075ce82c3891ee683ee62c1a7335de730088ed9

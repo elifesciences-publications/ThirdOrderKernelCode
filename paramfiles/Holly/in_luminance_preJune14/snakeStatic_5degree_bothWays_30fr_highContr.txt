@@ -1,0 +1,14 @@
+PARAMS	12		
+EPOCHS	3		
+Stimulus.stimtype	17	17	17
+Stimulus.duration	30	30	30
+Stimulus.lo	0.4	0.4	0.4
+Stimulus.hi	1	1	1
+Stimulus.pixSizeX	5	5	5
+Stimulus.pixSizeY	5	5	5
+Stimulus.rowHt	3	3	3
+Stimulus.spaceHt	0	0	0
+Stimulus.whichWay	2	1	2
+Stimulus.bgVal	0.5	0.5	0.5
+Stimulus.patType	4	4	4
+Stimulus.val	0	1	1

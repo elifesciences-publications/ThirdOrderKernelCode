@@ -1,0 +1,27 @@
+PARAMS	41																
+EPOCHS	31																
+Stimulus.stimtype	10004	10004	10004	10004	10004	10004	10004	10004	10004	10004	10004	10004	10004	10004	10004	10004	10004
+Stimulus.ordertype	4	4	4	4	4	4	4	4	4	4	4	4	4	4	4	4	4
+Stimulus.repeats	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.duration	240	240	240	240	240	240	240	240	240	240	240	240	240	240	240	240	240
+Stimulus.twoEyes	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.totalTime	31000	31000	31000	31000	31000	31000	31000	31000	31000	31000	31000	31000	31000	31000	31000	31000	31000
+Stimulus.lumL	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.lumR	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.updateL	1	3	3	3	3	6	6	6	6	9	9	9	9	18	18	18	18
+Stimulus.updateR	1	3	3	3	3	6	6	6	6	9	9	9	9	18	18	18	18
+Stimulus.delayL	0	0	0	1	1	0	0	1	1	0	0	1	1	0	0	1	1
+Stimulus.delayR	0	0	0	1	1	0	0	1	1	0	0	1	1	0	0	1	1
+Stimulus.cL	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.cR	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.phiL	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.phiR	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.dirXL	0	1	0	1	-1	1	0	1	-1	1	0	1	-1	1	0	1	-1
+Stimulus.dirXR	0	1	0	1	-1	1	0	1	-1	1	0	1	-1	1	0	1	-1
+Stimulus.dirYL	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.dirYR	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.numDegX	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5
+Stimulus.numDegY	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.eyeDist	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.timeRand	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.framesPerUp	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3	3

@@ -1,0 +1,8 @@
+PARAMS	13	
+EPOCHS	2	
+Stimulus.epochName	binary noise
+Stimulus.stimtype	90004  
+Stimulus.ordertype	1
+Stimulus.duration	60
+
+

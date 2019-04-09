@@ -1,0 +1,18 @@
+PARAMS	16																				
+EPOCHS	21																				
+Stimulus.stimtype	10028	10028	10028	10028	10028	10028	10028	10028	10028	10028	10028	10028	10028	10028	10028	10028	10028	10028	10028	10028	10028
+Stimulus.epochName	720 Hz flicker interleave	R 1440 Hz	L 1440	R 720	L 720	R 360	L 360	R 180	L 180	R 90	L 90	R 45	L 45	R 22.5	L 22.5	R 11.25	L 11.25	R 5.625	L 5.625	R 2.81	L  2.81
+Stimulus.ordertype	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.duration	300	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60	60
+Stimulus.twoEyes	1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.update	1	1	1	2	2	4	4	8	8	16	16	32	32	64	64	128	128	256	256	512	512
+Stimulus.delay	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.corrSign	1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1	-1
+Stimulus.dirX	1	1	-1	1	-1	1	-1	1	-1	1	-1	1	-1	1	-1	1	-1	1	-1	1	-1
+Stimulus.dirY	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.numDegX	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5	5
+Stimulus.numDegY	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.eyeDist	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.framesPerUp	24	24	24	24	24	24	24	24	24	24	24	24	24	24	24	24	24	24	24	24	24
+Stimulus.c	0	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+Stimulus.corrType	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2	2

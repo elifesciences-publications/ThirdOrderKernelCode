@@ -1,0 +1,24 @@
+PARAMS	22												
+EPOCHS	13												
+Stimulus.stimtype	2	2	2	2	2	2	2	2	2	2	2	2	2
+Stimulus.duration	105	15	15	60	60	60	60	60	60	60	60	60	60
+Stimulus.lumL	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.lumR	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
+Stimulus.contrastL	0	1	1	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2
+Stimulus.contrastR	0	1	1	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2	0.2
+Stimulus.rot.meanL	0	480	-480	240	-240	240	-240	240	-240	240	-240	240	-240
+Stimulus.rot.meanR	0	480	-480	240	-240	240	-240	240	-240	240	-240	240	-240
+Stimulus.spacingL	30	30	30	30	30	30	30	30	30	30	30	30	30
+Stimulus.spacingR	30	30	30	30	30	30	30	30	30	30	30	30	30
+Stimulus.twoEyes	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.eyeDist	10	10	10	10	10	10	10	10	10	10	10	10	10
+Stimulus.noisePerL	0	0	0	0	0	0.1	0.1	0.2	0.2	0.3	0.3	0.4	0.4
+Stimulus.noisePerR	0	0	0	0	0	0.1	0.1	0.2	0.2	0.3	0.3	0.4	0.4
+Stimulus.numDeg	5	5	5	5	5	5	5	5	5	5	5	5	5
+Stimulus.velNoiseCL	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.velNoiseCR	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.nUpdateL	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.nUpdateR	0	0	0	0	0	0	0	0	0	0	0	0	0
+Stimulus.calcType	1	1	1	2	2	2	2	2	2	2	2	2	2
+Stimulus.sUpdateL	1	1	1	3	3	3	3	3	3	3	3	3	3
+Stimulus.sUpdateR	1	1	1	3	3	3	3	3	3	3	3	3	3
