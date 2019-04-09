@@ -1,7 +1,7 @@
 # ThirdOrderKernelCode
 
 Code for kernel extraction, and evaluate performance of it in natural scenes. 
-
+(The code is under construction for readability)
 ## Kernel extraction with reverse-correlation 
 
 ## Simulation naturalistic motion with natural scenes
