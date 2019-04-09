@@ -2,22 +2,18 @@ function [ks_rois, kr_rois] = kernel_extraction_ARMA_OLS(respData,stimData,stimI
 % try to change this into a for loop over rr...
 maxTau = 32; % small guy.. % shuffle?
 order = 2;
-nMultiBars = 20; % hard coded it. use all of it.
+nMultiBars = size(stimData, 2); % hard coded it. use all of it.
 dx = 1;
 kernel_by_bar_flag = true;
-arma_flag = 1;
-maxTau_r = 1;
-ratio_fstim_fresp = 1;
+maxTau_r = 1; 
 for ii = 1:2:length(varargin)
     eval([varargin{ii} '= varargin{' num2str(ii+1) '};']);
 end
 nRoi =  length(respData);
 ks_rois = cell(nRoi,1);
 kr_rois = cell(nRoi,1);
-
-
 for rr = 1:1:nRoi
-    [OLSMat] = tp_Compute_OLSMat(respData(rr),stimData,stimIndexes(rr),'maxTau',maxTau,'order',order,'arma_flag',arma_flag,'maxTau_r',maxTau_r,'dx',dx, 'nMultiBars', nMultiBars,'ratio_fstim_fresp',ratio_fstim_fresp);
+    [OLSMat] = tp_Compute_OLSMat(respData(rr),stimData,stimIndexes(rr),'maxTau',maxTau,'order',order,'arma_flag',true,'maxTau_r',maxTau_r,'dx',dx);
     RR = OLSMat.resp{1} ;
     % one or two point a head...
     RR_arma = OLSMat.resp_auto{1};
@@ -27,14 +23,14 @@ for rr = 1:1:nRoi
             % for kernel one, do you want to change the way you do it? or test
             % whether they are the same...
             if kernel_by_bar_flag % you will only use this for first order kernel.
-                kernel_arma = zeros(maxTau + maxTau_r,nMultiBars);
+                 kernel_arma = zeros(maxTau + 1,nMultiBars);
                 for qq = 1:1:nMultiBars
                     SS = OLSMat.stim{qq};
                     kernel_arma(:,qq) = [SS,RR_arma]\RR;
                     %             kernel_arma = kernel_armaGPU
                 end
                 ks =  kernel_arma(1:maxTau,:);
-                kr =  kernel_arma(maxTau + 1:end,:);
+                kr =  kernel_arma(end - maxTau_r  + 1:  end,:);
             else
                 % compute the thing together.
                 [nT,maxTau] = size(OLSMat.stim{1});
@@ -44,7 +40,7 @@ for rr = 1:1:nRoi
                 end
                 kernel_arma = [SS,RR_arma]\RR;
                 ks =  reshape(kernel_arma(1:maxTau * nMultiBars),[maxTau,nMultiBars]);
-                kr =  kernel_arma(maxTau * nMultiBars + 1:end); % 0.54 % smaller... what if you incorporate second order kernel? % you have to do this....
+                kr =  kernel_arma(end - maxTau_r  + 1:  end,:); % 0.54 % smaller... what if you incorporate second order kernel? % you have to do this....
             end
             
         case 2
@@ -63,17 +59,19 @@ for rr = 1:1:nRoi
                         RR = OLSMat.resp{1} ;
                         RR_arma = OLSMat.resp_auto{1};
                         kernel_arma_this_sr = [SS_lower_half,RR_arma]\RR;
-                        kernel_arma_this_half = kernel_arma_this_sr(1:end - maxTau_r);
+                        kernel_arma_this_half = kernel_arma_this_sr(1:end - 1);
                         kernel_arma_this_full = zeros(maxTau,maxTau);
                         kernel_arma_this_full(A == 1) = kernel_arma_this_half;
                         kernel_arma_this_full = kernel_arma_this_full + kernel_arma_this_full';
-                        kernel_arma(:,qq) = [kernel_arma_this_full(:);kernel_arma_this_sr(size(SS_lower_half, 2) + 1: end)];
+                        kernel_arma(:,qq) = [kernel_arma_this_full(:);kernel_arma_this_sr(end)];
                     else
+                        tic
                         kernel_arma(:,qq) = [SS,RR_arma]\RR;
+                        toc
                     end
                 end
                 ks =  kernel_arma(1:maxTau^2,:);
-                kr =  kernel_arma(maxTau^2 + 1: end,:);
+                kr =  kernel_arma(end,:);
             else
                 if dx == 0
                     A = tril(true(maxTau, maxTau),-1);
@@ -102,7 +100,7 @@ for rr = 1:1:nRoi
                         SS(:, (qq-1)* maxTau_Squared + 1: qq * maxTau_Squared) = OLSMat.stim{qq};
                     end
                     kernel_arma = [SS,RR_arma]\RR;
-                    kr =  kernel_arma(end);
+                    kr =  kernel_arma(end - maxTau_r + 1:end);
                     for qq = 1:1:nMultiBars
                         ks(:,qq) =  kernel_arma((qq-1)* maxTau_Squared + 1: qq * maxTau_Squared);
                     end

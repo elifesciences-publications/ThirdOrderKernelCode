@@ -1,1 +1,0 @@
-PARAMS	6	EPOCHS	2	Stimulus.stimtype	50002	50002Stimulus.duration	60	60Stimulus.framesPerUp	6	6Stimulus.updateRate	180	180Stimulus.panorama	1	1Stimulus.reseed	0	0

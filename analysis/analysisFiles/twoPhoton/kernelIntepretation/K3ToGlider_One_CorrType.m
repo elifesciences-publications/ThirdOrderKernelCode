@@ -23,6 +23,9 @@ for rr = 1:1:nCorrType
     numEle = sum( indUseThisVec);
     
     individualCorrTrace(1:numEle,rr) = kernel(indUseThisVec == 1);
-    averageCorrValue(rr) = sum(individualCorrTrace(:,rr))/numEle;
+    averageCorrValue(rr) = sum(individualCorrTrace(:,rr));
 end
 end
+
+%%
+% [wind, ind] = K3ToGlider_Untils_ConstructWindMask(dt(1),dt(2), tMax, maxTau, 'nan_flag', true);

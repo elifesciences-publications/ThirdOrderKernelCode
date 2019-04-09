@@ -1,6 +1,6 @@
 function [respDataGPU,stimDataGPU,numElementsSummed,stimDataVar] = tp_kernels_ReverseCorrGPU_Prepare(respData,stimIndexes,stimData,maxTau)
 
-sampling_r_largerthan_s = sum(diff(stimIndexes{1}) == 0) > 10;
+sampling_r_largerthan_s = sum(diff(stimIndexes{1}) == 0) > 5;
 nRoi = length(respData);
 nMultiBars = size(stimData,2);
 
@@ -28,7 +28,8 @@ if sampling_r_largerthan_s == 0
     
     
     respDataGPUMat = respDataGPUMat(startingPointAll:endingPointAll,:);
-
+    %very bad... you should keep your zero to zero...
+    % respDataGPUMat = respDataGPUMat - repmat(mean(respDataGPUMat),[size(respDataGPUMat,1),1]);
     respDataGPU{1} = single(respDataGPUMat);
     % stim
     stimDataGPU = cell(1,nMultiBars);

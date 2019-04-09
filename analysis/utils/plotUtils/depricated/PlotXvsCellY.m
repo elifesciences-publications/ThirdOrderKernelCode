@@ -14,11 +14,11 @@ function plotTitle = plotXvsCellY(x,cellY,nameX,nameY,varargin)
     hold on;
     if isempty(cellError)
         for ii = 1:length(cellY)
-            plotTitle = plotXvsY(x,cellY{ii},nameX,nameY,varargin{:},'color',cellColor(ii,:),'plotLeg',plotLeg);
+            plotTitle = PlotXvsY(x,cellY{ii},nameX,nameY,varargin{:},'color',cellColor(ii,:),'plotLeg',plotLeg);
         end
     else
         for ii = 1:length(cellY)
-            plotTitle = plotXvsY(x,cellY{ii},nameX,nameY,'error',cellError{ii},'color',cellColor(ii,:),'plotLeg',plotLeg);
+            plotTitle = PlotXvsY(x,cellY{ii},nameX,nameY,'error',cellError{ii},'color',cellColor(ii,:),'plotLeg',plotLeg);
         end
     end
     legend(figLeg);

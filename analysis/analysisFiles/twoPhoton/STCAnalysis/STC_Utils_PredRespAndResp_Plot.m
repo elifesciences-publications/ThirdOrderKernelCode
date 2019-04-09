@@ -28,10 +28,11 @@ subplot(5,5,[1,2,3,6,7,8,11,12,13,16,17,18])
 % x_plot = binedx;
 % y_plot = flipud(binedy);
 % z_plot = flipud(binedz);
-[x_grid, y_grid] =ndgrid(binedx, binedy);
+% [x_grid, y_grid] =ndgrid(binedx, binedy);
 [x_grid, y_grid] =ndgrid(edgex, edgey);
 % z_grid = [binedz,nan(nBin (2),1)];  z_grid  = [z_grid; nan(1, nBin(1) + 1)];
-z_grid  = binedz;
+z_grid = binedz;
+
 ImagescXYZBinned(x_grid, y_grid, z_grid,'binFlag',false,'labelFlag', true, ...
     'titleStr',['resp VS predicted resp'],'xLabelStr','1^{st} component','yLabelStr','2^{nd} component')
 
@@ -44,7 +45,7 @@ zlevs = zmin:zinc:zmax;
 hold on
 [x_grid_countour,y_grid_countour] = ndgrid(binedx, binedy);
 z_grid_countour = binedz;
-% contour(x_grid_countour,y_grid_countour, z_grid_countour ,zlevs,'LineColor','k','LineWidth', 1);
+contour(x_grid_countour,y_grid_countour, z_grid_countour ,zlevs,'LineColor','k','LineWidth', 1);
 % xlabel('1^{st} component');
 % ylabel('2^{nd} component');
 title('response VS predicted response');

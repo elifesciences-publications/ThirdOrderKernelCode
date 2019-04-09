@@ -163,5 +163,5 @@ function D = RunAnalysis(varargin)
     disp(['analysis file took ' num2str(toc(a)) ' seconds to run']);
     
     % Important script that must be run for analysis to succeed
-    fourierGAL4SplineAnalysis;
+%     fourierGAL4SplineAnalysis;
 end

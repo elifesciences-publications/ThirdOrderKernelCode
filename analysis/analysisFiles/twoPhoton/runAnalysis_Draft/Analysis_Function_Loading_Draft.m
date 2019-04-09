@@ -1,13 +1,24 @@
 function data = Analysis_Function_Loading_Draft(filepath, kernel_identifier, varargin)
 S = GetSystemConfiguration;
-kernel_folder = S.kernelSavePath;
+data_source = 'twoPhoton';
+
 % after this, everything should be arranged in roi basis...
 which_data = 'roi_data_edge_only';
-first_order_format = 'new';
-
 for ii = 1:2:length(varargin)
     eval([varargin{ii} '= varargin{' num2str(ii+1) '};']);
 end
+if isfield(kernel_identifier, 'data_source')
+    switch kernel_identifier.data_source
+        case 'twoPhoton'
+            kernel_folder = S.kernelSavePath_twoPhoton;
+        case 'behavior'
+            kernel_folder = S.kernelSavePath_behavior;
+    end  
+else
+    kernel_folder = S.kernelSavePath;
+end
+
+
 % this would be changed dramatically.
 [exist_data,data_relative_path] = kernel_path_management_utils_get_kernelInfo(filepath, kernel_identifier,  which_data);
 if ~isempty(strfind(which_data , 'first')) || ~isempty(strfind(which_data , 'second')) || ~isempty(strfind(which_data , 'third'))
@@ -26,6 +37,10 @@ if exist_data
             % should all be new format.
         case 'kernel'
             data = saveKernels.kernels;
+            if ~isa(data, 'cell')
+                data = {data};
+            else
+            end
             %             if strcmp(first_order_format,'old')
             %                 data = saveKernels.kernels;
             %             else

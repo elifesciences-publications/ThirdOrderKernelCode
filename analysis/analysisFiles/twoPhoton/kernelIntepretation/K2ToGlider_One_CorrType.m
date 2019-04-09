@@ -1,10 +1,13 @@
-function [averageCorrValue, individualCorrTrace] = K2ToGlider_One_CorrType(kernel,corrParam)
-% do you want to do a lot of corrType at the same time?
-% yes...
+function [averageCorrValue, individualCorrTrace] = K2ToGlider_One_CorrType(kernel,corrParam, varargin)
+tMax = 50;
+for ii = 1:2:length(varargin)
+    eval([varargin{ii} '= varargin{' num2str(ii+1) '};']);
+end
+
+% The 
 nCorrType = length(corrParam);
 maxTauSquared = length(kernel);
 maxTau = round(nthroot(maxTauSquared,2));
-tMax = 50;
 
 indUse = zeros(maxTau,maxTau,nCorrType);
 for rr = 1:1:nCorrType
@@ -21,6 +24,6 @@ for rr = 1:1:nCorrType
     numEle = sum(indUseThisVec);
     
     individualCorrTrace(1:numEle,rr) = kernel(indUseThisVec == 1);
-    averageCorrValue(rr) = sum(individualCorrTrace(:,rr))/numEle;
+    averageCorrValue(rr) = sum(individualCorrTrace(:,rr));
 end
 end

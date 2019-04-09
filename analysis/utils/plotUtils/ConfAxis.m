@@ -8,8 +8,9 @@ function ConfAxis(varargin)
     labelX = [];
     labelY = [];
     rotateLabels = 0;
-    fontSize = 20;
-    
+    fontSize = 15;
+    LineWidth = 2;
+    MarkerSize = 8;
     for ii = 1:2:length(varargin)
         eval([varargin{ii} '= varargin{' num2str(ii+1) '};']);
     end
@@ -83,11 +84,11 @@ function ConfAxis(varargin)
     ax = gca;
     ax.YLabel.FontSize = fontSize;
     ax.XLabel.FontSize = fontSize;
-    ax.LineWidth = 2;
-    set(gca,'FontSize',fontSize,'box','off','FontName','Helvetica');
+    ax.LineWidth = LineWidth;
+    set(gca,'FontSize',fontSize,'box','off','FontName','Arial');
     set(gca,'XColor',[0 0 0],'YColor',[0 0 0],'ZColor',[0 0 0]);
-    set(findall(gca, 'Type', 'Line'),'LineWidth',2,'MarkerSize',8);
-    set(findall(gca, 'Type', 'ErrorBar'),'LineWidth',2,'MarkerSize',8);
+    set(findall(gca, 'Type', 'Line'),'LineWidth',LineWidth,'MarkerSize',MarkerSize);
+    set(findall(gca, 'Type', 'ErrorBar'),'LineWidth',LineWidth,'MarkerSize',MarkerSize);
     
     yAxisLimits = ylim;
     set(gca,'LooseInset',get(gca,'TightInset'));

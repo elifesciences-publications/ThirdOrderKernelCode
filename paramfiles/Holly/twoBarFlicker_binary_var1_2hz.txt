@@ -1,1 +1,0 @@
-PARAMS	10EPOCHS	1Stimulus.stimtype	50001Stimulus.duration	60Stimulus.framesPerUp	6Stimulus.flickerFreq	10Stimulus.mLum	0.5Stimulus.var	1Stimulus.distribution	2Stimulus.barWd	4.5Stimulus.spaceWd	10Stimulus.reseed	1

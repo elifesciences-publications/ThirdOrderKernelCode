@@ -39,8 +39,8 @@ ymax = max(abs(y_plot));
 z_max = max(abs(z_plot(:)));
 
 axis_max = max([ xmax, ymax]) * 1.1;
-set(gca,'XLim',[-axis_max, axis_max]);
-set(gca,'YLim',[-axis_max, axis_max]);
+% set(gca,'XLim',[-axis_max, axis_max]);
+% set(gca,'YLim',[-axis_max, axis_max]);
 set(gca,'ZLim',[-z_max,z_max]);
 set(gca,'CLim',[-z_max,z_max]);
 set(gca,'Color',[1,1,1]);

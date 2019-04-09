@@ -1,8 +1,0 @@
-PARAMS	6										
-EPOCHS	11										
-Stimulus.stimtype	35	35	35	35	35	35	35	35	35	35	35
-Stimulus.duration	300	300	300	300	300	300	300	300	300	300	300
-Stimulus.contrast	-1	-0.8	-0.6	-0.4	-0.2	0	0.2	0.4	0.6	0.8	1
-Stimulus.ordertype	1	1	1	1	1	1	1	1	1	1	1
-Stimulus.mlum	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5	0.5
-Stimulus.framesPerUp	3	3	3	3	3	3	3	3	3	3	3

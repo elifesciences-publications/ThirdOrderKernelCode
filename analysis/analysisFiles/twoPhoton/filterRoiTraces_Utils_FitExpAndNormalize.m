@@ -15,15 +15,11 @@ function [roi_avg_intensity_filtered_normalized, roi_exp_fit] = filterRoiTraces_
     % Find that exponential's time constant to create the fitted
     % exponential
     tau = polyfit_average(1);
-    if tau > 0
-        tau = 0;
-    end
-    
     eval_pts_fit = (1:size(roi_avg_intensity, 1))';
     exp_fit = exp(tau*eval_pts_fit);
     
     % Determine each ROI's amplitudes by seeing what multiple of the
-    % exponential it is on average %% is this true?
+    % exponential it is on average
     exp_fit_amp = exp_fit(firstFittingTimePoint:lastFittingTimePoint);
     bgd_sub_amp = roi_avg_intensity_for_fitting_fnaught(firstFittingTimePoint:lastFittingTimePoint, :);
     roi_amplitudes = mean(bgd_sub_amp./repmat(exp_fit_amp,  [1, size(roi_avg_intensity_for_fitting_fnaught, 2)]));

@@ -8,10 +8,11 @@ nMultiBars = 20;
 use_center_of_rf_flag = true;
 % 7:13;
 x_bank = [7:13];
+tMax = 20;
+
 for ii = 1:2:length(varargin)
     eval([varargin{ii} '= varargin{' num2str(ii+1) '};']);
 end
-
 cov_mat_glider = K2_CovarianceMatrix_Visualization_Compute_GliderRespPred(cov_mat, 'dt', dt, 'nMultiBars', nMultiBars, 'tMax',tMax);
 
 dx_dt_val = zeros(length(dt_bank),length(dx_bank));

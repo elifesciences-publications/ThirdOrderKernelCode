@@ -6,8 +6,8 @@ align_laser.m
 *.mat
 startup*
 sysConfig.csv
+sysConfig.txt
 view_locs.txt
-sysConfig.csv
 flyId.mat
 sysConfig2.csv
 ghostscript.txt

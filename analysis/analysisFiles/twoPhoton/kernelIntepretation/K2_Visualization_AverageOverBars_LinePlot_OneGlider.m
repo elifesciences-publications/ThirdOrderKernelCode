@@ -3,12 +3,11 @@ function K2_Visualization_AverageOverBars_LinePlot_OneGlider(dt_bank, dt_x_dx_pl
 label_flag = true;
 dx_label_flag = false;
 dx = 0;
-timeUnit = 1/60;
-
 for ii = 1:2:length(varargin)
     eval([varargin{ii} '= varargin{' num2str(ii+1) '};']);
 end
 
+timeUnit = 1/60;
 dt_x_dx_plot_average_over_bar = dt_x_dx_plot_average_over_bar / timeUnit^2;
 resp_sem = resp_sem/timeUnit^2;
 shuffle_std = shuffle_std/timeUnit^2;

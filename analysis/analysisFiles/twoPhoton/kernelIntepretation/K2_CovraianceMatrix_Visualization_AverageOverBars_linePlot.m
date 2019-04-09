@@ -4,7 +4,6 @@ barUse = {[8,9,10],[9,10,11],[9,10,11],[8,9,10]};
 dx_plot_bank = [0,1,2,3];
 n_average_over_bars_bank = [2,3];
 typeStr = {'T4_Pro', 'T4_Reg', 'T5_Pro', 'T5_Reg'};
-
 alpha = 0.05;
 dt_bank = [-12:1:12];
 % correlation between them.
@@ -15,7 +14,7 @@ for ii = 1:2:length(varargin)
     eval([varargin{ii} '= varargin{' num2str(ii+1) '};']);
 end
 % to draw them in the same scale, calculate first.
-nType = length(typeStr);
+nType = 4;
 dt_x_dx_plot_average_over_bar_all = cell(nType, 1);
 resp_mean_all = cell(nType, 1);
 resp_sem_all = cell(nType, 1);
@@ -24,7 +23,7 @@ shuffle_std_all = cell(nType, 1);
 p_val_all = cell(nType, 1);
 
 
-for tt = 1:1:nType
+for tt = 1:1:4
     
     x_bank_this_type = barUse{tt};
     cov_mat_mean_noise_this_type = cellfun(@(A)A{tt}, cov_mat_mean_noise,'UniformOutput', false);
@@ -42,10 +41,10 @@ for tt = 1:1:nType
         cov_mat_individual_this_type{rr}(eye(n_length_cov) == 1) = 0;
     end
     [cov_mat_glider_aligned,  cov_mat_glider_aligned_noise] ...
-        = K2_Visualization_Compute_Cov_Mat_Glider_Mean_MeanNoise(cov_mat_mean_this_type, cov_mat_mean_noise_this_type, varargin{:});
+        = K2_Visualization_Compute_Cov_Mat_Glider_Mean_MeanNoise(cov_mat_mean_this_type, cov_mat_mean_noise_this_type);
     
     [~,  cov_mat_glider_aligned_individual] ...
-        = K2_Visualization_Compute_Cov_Mat_Glider_Mean_MeanNoise(cov_mat_mean_this_type, cov_mat_individual_this_type, varargin{:});
+        = K2_Visualization_Compute_Cov_Mat_Glider_Mean_MeanNoise(cov_mat_mean_this_type, cov_mat_individual_this_type);
     
     %% prepare data strorage for different n.
     dt_x_dx_plot_average_over_bar_all{tt} = cell(length(n_average_over_bars_bank), 1);
@@ -71,10 +70,10 @@ for tt = 1:1:nType
             % value.
             [dt_x_dx_plot_average_over_bar, shuffle_mean, shuffle_std, p_val] = ...
                 K2_Visualization_AverageOverBars_Computation(cov_mat_glider_aligned, cov_mat_glider_aligned_noise, ...
-                'x_bank', x_bank_this_type, 'dx_plot',dx_plot_bank(dxx),'n_average_over_bars',n_average_over_bars_bank(nn),'dt_bank',dt_bank ,'dt',dt, 'nMultiBars',nMultiBars);
+                'x_bank', x_bank_this_type, 'dx_plot',dx_plot_bank(dxx),'n_average_over_bars',n_average_over_bars_bank(nn),'dt_bank',dt_bank);
             [~, resp_mean, resp_std, ~] = ...
                 K2_Visualization_AverageOverBars_Computation(cov_mat_glider_aligned, cov_mat_glider_aligned_individual, ...
-                'x_bank', x_bank_this_type, 'dx_plot',dx_plot_bank(dxx),'n_average_over_bars',n_average_over_bars_bank(nn),'dt_bank',dt_bank, 'dt',dt, 'nMultiBars',nMultiBars);
+                'x_bank', x_bank_this_type, 'dx_plot',dx_plot_bank(dxx),'n_average_over_bars',n_average_over_bars_bank(nn),'dt_bank',dt_bank);
             resp_sem = resp_std/sqrt(nRoi);
             
             
@@ -93,7 +92,7 @@ for tt = 1:1:nType
                 K2_Visualization_AverageOverBars_LinePlot_OneGlider...
                     (dt_bank, dt_x_dx_plot_average_over_bar(:,qq), resp_sem(:,qq), shuffle_std(:,qq), shuffle_mean(:,qq), p_val(:,qq), maxValue, alpha);
                 % remember the dx, bar position and ave over.
-                titleStr = ['dx', num2str(dx_plot_bank(dxx)), 'Ave', num2str(n_average_over_bars_bank(nn)), 'Bar', num2str(x_bank_this_type(qq))];
+                titleStr = ['dx', num2str(dx_plot_bank(dxx)), '_ave', num2str(n_average_over_bars_bank(nn)), '_bar', num2str(x_bank_this_type(qq))];
                 if dxx == 1
                 title(titleStr);
                 else

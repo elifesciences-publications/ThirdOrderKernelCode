@@ -44,6 +44,12 @@ for ii = 1:1:n
             else
                 kernel_string{ii} = '';
             end
+        elseif noise == 1
+            if isequal(dx, [0,1])
+                kernel_string{ii} = 'third_0_1_noise';
+            elseif isequal(dx, [0,-1])
+                kernel_string{ii} = 'third_0_n1_noise';
+            end
         end
     end
     

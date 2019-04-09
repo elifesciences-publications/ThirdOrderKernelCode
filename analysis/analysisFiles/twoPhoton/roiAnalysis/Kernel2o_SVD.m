@@ -1,8 +1,8 @@
 function [kernelFromSVD, U,V] = Kernel2o_SVD(kernel,titleStr)
 % first, get the relevant point out.
 timeUnit = 1/60;
-dt = -30:1:30;
-tMax = 30;
+dt = -8:1:8;
+tMax = 56;
 maxTauSquared = length(kernel);
 maxTau = round(sqrt(maxTauSquared));
 
@@ -22,7 +22,7 @@ for ii = 1:1:nDt
 end
 
 [U,S,V] = svd(flatKernel);
-kernel1Component = U(:,1) * V(:,1)'; 
+kernel1Component = U(:,1) * S(1, 1) *  V(:,1)'; 
 % predicted 2 second order by svd;
 kernelFromSVD = zeros(size(kernel));
 for ii = 1:1:nDt
@@ -32,15 +32,22 @@ end
 MakeFigure;
 subplot(2,3,1);
 quickViewOneKernel(kernel,2);
-title(titleStr);
+title('original kernel');
+% title(titleStr);
 subplot(2,3,2);
 quickViewOneKernel(flatKernel,1,'posLabelStr','time [s]','posUnit',timeUnit);
 title('flattened kernel');
+subplot(2,3,3);
+scatter(1:size(S, 2), diag(S), 'filled');
+title('S')
+
 subplot(2,3,5);
 quickViewOneKernel(kernel1Component,1,'posLabelStr','time [s]','posUnit',timeUnit);
-
+title('flattened kernel recovered from svd');
 subplot(2,3,4);
 quickViewOneKernel(kernelFromSVD,2);
+title('kernel recovered from svd');
+
 
 subplot(4,3,9);
 plot(timeUnit * (1:tMax),U(:,1)/sum(U(:,1)));

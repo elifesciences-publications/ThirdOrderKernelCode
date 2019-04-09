@@ -103,4 +103,3 @@ end
 %bitmap
 texStr.tex = CreateTexture(bitMap,Q);
 end
-

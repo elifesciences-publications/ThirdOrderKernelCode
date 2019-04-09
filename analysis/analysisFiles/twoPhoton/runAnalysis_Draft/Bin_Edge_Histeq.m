@@ -1,16 +1,19 @@
 function x_edge = Bin_Edge_Histeq(x, nbins)
-x_positive = x(x > 0);
-% always even number.
-bins_half = nbins/2;
+% x_positive = x(x > 0);
+% % always even number.
+% bins_half = nbins/2;
+% 
+% % do the positive side.
+% a = sort(x_positive,'ascend');
+% n_onebin = floor(length(x)/2 /bins_half);
+% edge_positive = a((0:1:bins_half - 1) * n_onebin + 1);
+% edge_negative = -edge_positive(end:-1:2);
+% x_edge = [min(min(x), min(edge_negative));edge_negative; edge_positive;max(max(x), max(edge_positive))];
+% 
+% h = histogram(x,'BinMethod','fd','Visible', 'off');
 
-% do the positive side.
-a = sort(x_positive,'ascend');
-n_onebin = floor(length(x)/2 /bins_half);
-edge_positive = a((0:1:bins_half - 1) * n_onebin + 1);
-edge_negative = -edge_positive(end:-1:2);
-x_edge = [min(x);edge_negative; edge_positive;max(x)];
-
-
+h = histogram(x,'BinMethod','fd','Visible', 'off');
+x_edge = h.BinEdges;
 
 % % deal with positive sign and negative sign.
 % positive_x = x(x >= 0);

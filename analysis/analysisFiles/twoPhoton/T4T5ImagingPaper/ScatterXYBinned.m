@@ -7,11 +7,12 @@ setAxisLimFlag = 1;
 plotDashLineFlag = 1;
 plotXYCordi = false;
 edge_distribution = 'linear';
+edge_preselect = [];
 for ii = 1:2:length(varargin)
     eval([varargin{ii} '= varargin{' num2str(ii+1) '};']);
 end
 
-[x_,y_,n] = BinXY(x,y,'x','nbins', nBins, 'edge_distribution', edge_distribution);
+[x_,y_,n] = BinXY(x,y,'x','nbins', nBins, 'edge_distribution', edge_distribution,'edge_preselect', edge_preselect);
 % you might need a flag to decide whether to plot this range.
 xPlot = x_(n>nOneBin);
 yPlot = y_(n>nOneBin);
@@ -34,7 +35,7 @@ set(gca,'XLim',xLimValue,'YLim',yLimValue);
 end
 if plotDashLineFlag 
 hold on
-plot(xLimValue,yLimValue,'b--');
+plot(xLimValue,yLimValue,'k--');
 hold off
 end
 if plotXYCordi

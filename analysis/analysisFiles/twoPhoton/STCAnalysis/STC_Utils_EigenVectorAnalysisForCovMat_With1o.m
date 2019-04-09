@@ -22,9 +22,9 @@ maxTau = size(cov_mat,1)/nMultiBars;
 [cov_mat_eigenvector_all,cov_mat_eigenvalue_all] = eig(cov_mat);
 % first two eigenvectors.
 cov_mat_eigenvector = zeros(maxTau , length(barUse),2); corr_1o = zeros(2,1);
-cov_mat_eigenvector(:,:,1) = reshape(cov_mat_eigenvector_all(:,end),[maxTau, length(barUse)]);
+cov_mat_eigenvector(:,:,1) = reshape(cov_mat_eigenvector_all(:,1),[maxTau, length(barUse)]);
 [cov_mat_eigenvector(:,:,1), corr_1o(1)] = ChangeEigenvectorsDirection(first_kernel, cov_mat_eigenvector(:,:,1));
-cov_mat_eigenvector(:,:,2) = reshape(cov_mat_eigenvector_all(:,end - 1),[maxTau, length(barUse)]);
+cov_mat_eigenvector(:,:,2) = reshape(cov_mat_eigenvector_all(:,2),[maxTau, length(barUse)]);
 [cov_mat_eigenvector(:,:,2), corr_1o(2)] = ChangeEigenvectorsDirection(first_kernel, cov_mat_eigenvector(:,:,2));
 
 
@@ -69,12 +69,12 @@ for ii = 1:1:2
     E = cov_mat_eigenvector(:,:,ii);
     quickViewOneKernel(E,1, 'genotype', genotype, 'f', f, 'colorbarFlag', false, 'barUse', barUse, 'bin_stim_flag', bin_stim_flag, 'genotype',genotype);
     if ~is_1o_projected_out_flag
-        title({sprintf('%d th eigenvectors, eigenvalue = %.3f', ii, diagD(end - ii + 1)),sprintf('corr with 1o = %.3f',  corr_1o(ii))});
+        title({sprintf('%d th eigenvectors, eigenvalue = %.3f', ii, diagD(ii)),sprintf('corr with 1o = %.3f',  corr_1o(ii))});
     else
         if ii == 1
             title('1o kernel');
         else
-            title({sprintf('%d th eigenvectors, eigenvalue = %.3f', 1, diagD(end - ii)),sprintf('corr with 1o = %.3f',  corr_1o(ii))});
+            title({sprintf('%d th eigenvectors, eigenvalue = %.3f', 1, diagD(1)),sprintf('corr with 1o = %.3f',  corr_1o(ii))});
         end
     end
 end
@@ -85,9 +85,9 @@ set(gca, 'XLim',[-10,length(cov_mat_eigenvalue_all) + 10]); % get more space.
 % amplify the largest and the smallest in the end.
 hold on
 if ~is_1o_projected_out_flag
-    scatter([length(diagD) - 1,length(diagD)],[diagD(end - 1),diagD(end)],'r.');
+    scatter([1:2],diagD(1:2),'r.');
 else
-    scatter(length(diagD),diagD(end),'r.');
+    scatter(1,diagD(1),'r.');
     
 end
 title('eigenvalue of covariance matrix')

@@ -1,8 +1,0 @@
-PARAMS	6
-EPOCHS	4
-Stimulus.stimtype	40008	40008	40008	40008
-Stimulus.duration	600	600	600	600
-Stimulus.period	30	15	30	15
-Stimulus.numDeg	20	20	20	20
-Stimulus.framesPerUp	3	3	3	3
-Stimulus.dutyCycle	.2	.2	.5	.5

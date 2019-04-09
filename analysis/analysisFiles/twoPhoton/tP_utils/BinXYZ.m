@@ -1,4 +1,4 @@
-function [binedx,binedy,binedz,n_x,n_y,n_z,binedz_sem, edgex, edgey] = BinXYZ(x,y,z,nbinsUsr, edge_distribution, clean_extreme_value_flag)
+function [binedx,binedy,binedz,n_x,n_y,n_z,binedz_sem, edgex, edgey] = BinXYZ(x,y,z,nbinsUsr, edge_distribution, clean_extreme_value_flag,edges)
 
 nbins = nbinsUsr;
 % edgex should be changed to a fixed one now.....
@@ -16,14 +16,19 @@ max_x = max(abs(x));
 max_y = max(abs(y));
 
 if strcmp(edge_distribution,'linear')
-    edgex = linspace(-max_x ,max_x,nbins(1)); % maximun value would not be appropriate. will it? it should be more symmetric
-    edgey = linspace(-max_y,max_y,nbins(2));
+    edgex = linspace(-max_x ,max_x,nbins(1) + 1); % maximun value would not be appropriate. will it? it should be more symmetric
+    edgey = linspace(-max_y,max_y,nbins(2) + 1);
     
 elseif strcmp(edge_distribution,'histeq')
-    % change the function 
+    % change the function
     edgex = Bin_Edge_Histeq(x, nbins(1));
     edgey = Bin_Edge_Histeq(y, nbins(2));
+elseif strcmp(edge_distribution,'preselect')
+    edgex = edges{1};
+    edgey = edges{2};
+    nbins = cellfun(@(x)length(x), edges) - 1;
 end
+
 [n_x,~,bins_x] = histcounts(x,edgex);
 [n_y,~,bins_y] = histcounts(y, edgey);
 % use bins_x and bins_y to arrange for bins_z

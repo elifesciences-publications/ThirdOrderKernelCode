@@ -15,7 +15,7 @@ end
 dtMax = dt_vary_max;
 
 %% First, calculate the corrValue for each dxbank
-dtBank_ThirdOrder = [{(0:dtMax)'},{(0:dtMax)'}];
+dtBank_ThirdOrder = [{(0:dtMax + 3)'},{(0:dtMax  + 3)'}];
 corrParam_third = K2K3ToGlider_Utils_FromDtBankToCorrParam(dtBank_ThirdOrder,3);
 % you will deal with
 ndx_bank  = length(dx_bank );

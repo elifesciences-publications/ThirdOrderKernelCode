@@ -15,8 +15,6 @@ plot_flag = false;
 n_resp_max = 10000;
 order = 1;
 yLabelStr = [];
-ratio_fstim_fresp = 1;
-
 for ii = 1:2:length(varargin)
     eval([varargin{ii} '= varargin{' num2str(ii+1) '};']);
 end
@@ -25,17 +23,14 @@ n_kernel = size(kernel,3);
 predResp = cell(n_kernel,1);
 resp = [];
 n_batch = ceil(length(respData)/n_resp_max);
-
+tic
 for nn = 1:1:n_batch
     ind_this_batch = (nn-1) * n_resp_max + 1: min( nn * n_resp_max, length(respData));
     respData_this_batch    = respData(ind_this_batch);
-    
-    %% when response is longer than stimulus, this does not work
-%     stimData_this_batch    = stimData(ind_this_batch, :);
+    stimData_this_batch    = stimData(ind_this_batch, :);
     stimIndexes_this_batch = stimIndexes(ind_this_batch) - (nn - 1) * n_resp_max;
-    stimData_this_batch    = stimData(1:stimIndexes_this_batch(end), :); % stimulus is uniform...
-    [OLSMat] = tp_Compute_OLSMat({respData_this_batch}, stimData_this_batch, {stimIndexes_this_batch} ,'maxTau',maxTau,'order',1,'nMultiBars', nMultiBars,'barUse', barUse,'setBarUseFlag', true, 'ratio_fstim_fresp',ratio_fstim_fresp);
-
+    [OLSMat] = tp_Compute_OLSMat({respData_this_batch}, stimData_this_batch, {stimIndexes_this_batch} ,'maxTau',maxTau,'order',1,'nMultiBars', nMultiBars,'barUse', barUse,'setBarUseFlag', true);
+    
     pred_resp_this_batch = cell(n_kernel,1);
     for ii = 1:1:n_kernel
         pred_resp_this_batch{ii} = zeros(length(OLSMat.resp{1}),1);
@@ -45,7 +40,6 @@ for nn = 1:1:n_batch
         end
 
     end
-    
     for ii = 1:1:n_kernel
         predResp{ii} = cat(1,predResp{ii}, pred_resp_this_batch{ii}); %
     end
@@ -53,6 +47,7 @@ for nn = 1:1:n_batch
 end
 % response should be used? no
 % resp = OLSMat.resp{1};
+toc
 %%
 if plot_flag
     resp_plot = resp;

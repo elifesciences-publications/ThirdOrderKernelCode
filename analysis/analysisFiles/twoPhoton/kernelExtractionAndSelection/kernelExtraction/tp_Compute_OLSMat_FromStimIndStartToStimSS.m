@@ -22,7 +22,7 @@ if setBarUseFlag
         error('barUse is not set');
     end
 else
-    nMultiBarsUse = nMultiBars;
+    nMultiBarsUse = size(stimData,2);
     barUse = 1:nMultiBarsUse;
 end
 stimMatrix = cell(nMultiBarsUse,1);
@@ -41,10 +41,10 @@ switch order
     case 2
        
         
-        for qq = 1:1:nMultiBarsUse
+        for qq = 1:1:nMultiBarsUse;
             barUseThis = barUse(qq);
             stim_1 = stimData(:,barUseThis);
-            stim_2 = stimData(:,mod(barUseThis - 1 + dx,nMultiBars) + 1);
+            stim_2 = stimData(:,mod(barUseThis,nMultiBars) + dx); % watch out for q == 20; if q == 20, q + 1 = 21? no mod(q+1,20)
             %                 SS_1 = zeros(nT - maxTau + 1,maxTau);
             %                 SS_2 = zeros(nT - maxTau + 1,maxTau);
             %                  SS = zeros(nT - maxTau + 1, maxTau^2);

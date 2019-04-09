@@ -14,11 +14,13 @@ else
 %     disp('the diagonal matrix of self-self covmatrix is not interpolated by its nearby points');
 end
 % look at the filter, and make sure that they are good filters.
+
+% start put the other. one by one
 %%
 covCell = cell(nMultiBars,nMultiBars); % the third dimension is rois
 for ii = 1:1:nMultiBars
     for jj = 1:1:nMultiBars
-        dx = mod(jj - ii,nMultiBars);
+        dx = mod(jj - ii,20);
         dx_ind = dx + 1; % ind referes to ind in kernels_all
         % do the interpolation before putting them at place.
         kernel_vec = kernels_selfterm_corrected{dx_ind}(:,ii);

@@ -1,8 +1,7 @@
 function quickViewCovMat(cov_mat,varargin)
 nMultiBars = 20;
-genotype = 'SAC_calcium';
+genotype = 'T4T5';
 labelFlag = true;
-spatial_resolution = 32;
 for ii = 1:2:length(varargin)
     eval([varargin{ii} '= varargin{' num2str(ii+1) '};']);
 end
@@ -10,7 +9,7 @@ if ~exist('barUse', 'var')
     barUse = 1:nMultiBars;
 end
 maxTau = size(cov_mat,1)/nMultiBars;
-quickViewOneKernel(cov_mat,1,'labelFlag',false, 'f', f);
+quickViewOneKernel(cov_mat,1,'labelFlag',false)
 
 for ii = 1:1:nMultiBars
     hold on
@@ -53,21 +52,20 @@ if labelFlag
             set(gca, 'YTick' ,(1:nMultiBars) *  maxTau - maxTau/2, 'YTickLabel',posTickLabelStr(barUse));
             xlabel('Eccentricity','FontSize',18);
             ylabel('Eccentricity','FontSize',18);
-            
         case 'SAC_calcium'
-            posLabelStr = 'Eccentricity[\mum]';
-            
-            spatial_location = 0:spatial_resolution:spatial_resolution*15;
-            posTickLabelStr  = cell(length(spatial_location),1); % absolute 10 positions.
-            for qq = 1:1:length(spatial_location) - 1
+
+                %             spatial_location = 150:-30:0;
+            spatial_location = 0:30:150;
+            posTickLabelStr  = cell(5,1); % absolute 10 positions.
+            for qq = 1:1:length(spatial_location) - 1;
                 %                 posTickLabelStr{qq} = sprintf('%d~%d', spatial_location(qq + 1:-1: qq));
                 posTickLabelStr{qq} = sprintf('%d~%d', spatial_location(qq: qq + 1));
             end
-            
+
             set(gca, 'XTick' ,(1:nMultiBars) *  maxTau - maxTau/2, 'XTickLabel',posTickLabelStr(barUse));
             set(gca, 'YTick' ,(1:nMultiBars) *  maxTau - maxTau/2, 'YTickLabel',posTickLabelStr(barUse));
-            xlabel(posLabelStr,'FontSize',18);
-            ylabel(posLabelStr,'FontSize',18);
+            xlabel('Eccentricity','FontSize',18);
+            ylabel('Eccentricity','FontSize',18);
             
     end
     ax = gca;

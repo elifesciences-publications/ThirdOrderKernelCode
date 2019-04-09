@@ -1,4 +1,4 @@
-function figure_h = quickViewKernelsFirst(kernels,varargin)
+function quickViewKernelsFirst(kernels,varargin)
 smoothFlag = false;
 cutFilterFlag = false;
 barRange = 5:15;
@@ -22,7 +22,6 @@ if nMaxRoi == nMaxRoiOne;
     
     nRound = ceil(nRoi/nMaxRoi);
     count = 1;
-    figure_h = cell(nRound, 1);
     for ii = 1:1:nRound
         MakeFigure;
         for cc = 1:1:nMaxRoiOne
@@ -30,7 +29,7 @@ if nMaxRoi == nMaxRoiOne;
             if smoothFlag
                 quickViewOneKernel_Smooth(squeeze(kernels(:,:,count)),1,'labelFlag',true,'cutFilterFlag',cutFilterFlag,'barRange',barRange,'timeRange',timeRange);
             else
-                quickViewOneKernel(squeeze(kernels(:,:,count)),1,'labelFlag',true);
+                quickViewOneKernel(squeeze(kernels(:,:,count)),1,'labelFlag',false);
             end
             if titleByRoiSequenceFlag
                 title(num2str(roiSequence(count)));
@@ -39,11 +38,9 @@ if nMaxRoi == nMaxRoiOne;
             end
             count = count+1;
             if(count > nRoi)
-                figure_h{ii} = gcf;
                 return
             end
         end
-        figure_h{ii} = gcf;
     end
 else
     subplotHt = floor(sqrt(nRoi));
@@ -54,7 +51,7 @@ else
         if smoothFlag
             quickViewOneKernel_Smooth(squeeze(kernels(:,:,count)),1,'labelFlag',true,'cutFilterFlag',cutFilterFlag,'barRange',barRange,'timeRange',timeRange);
         else
-            quickViewOneKernel(squeeze(kernels(:,:,count)),1,'labelFlag',true);
+            quickViewOneKernel(squeeze(kernels(:,:,count)),1,'labelFlag',false);
         end
         if titleByRoiSequenceFlag
             title(num2str(roiSequence(count)))

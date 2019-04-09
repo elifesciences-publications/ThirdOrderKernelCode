@@ -1,4 +1,5 @@
 function wind = K2ToGlider_Untils_ConstructWindMask(dt,tMax,maxTau)
+% dt = 1 by convention is leftward direction 
 wind = true(maxTau,maxTau);
 B = tril(wind,dt) .* triu(wind,dt); % how do you only choose part of it?
 b = find(B == 1);
@@ -7,6 +8,6 @@ b = b(1:tMaxUse);
 wind = false(maxTau,maxTau);
 wind(b) = 1;
 wind = reshape(wind,maxTau,maxTau);
-MakeFigure;
-imagesc(wind);
+% MakeFigure;
+% imagesc(wind);
 end

@@ -1,5 +1,5 @@
 function quickViewSecondKernel_Impulse(K2,varargin)
-mode  = 1; % default, plot the final state. other wise, plot the
+mode  = 2; % default, plot the final state. other wise, plot the
 
 xLabelStr = 'temporal interval [s]';
 yLabelStr = 'time in the past [s]';

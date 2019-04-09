@@ -113,8 +113,9 @@ function RunStimulus(Q)
             Q.windowIDs.active = Q.windowIDs.pano;
             % Run the stimulus who's number is specified in currParam.stimType,
             % store the texture
+            tic
             [Q.texStr,Q.stims.stimData] = Q.stims.stimlookup{Q.stims.numList == Q.stims.currParam.stimtype}(Q);
-            
+            toc
             % We want to allow stimfunctions to add alignment flashes if
             % necessary, so we only update the flash state if the
             % stimfunction hasn't written out a flash

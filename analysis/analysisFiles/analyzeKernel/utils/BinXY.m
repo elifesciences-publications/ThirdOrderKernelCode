@@ -9,11 +9,12 @@ function [binedx,binedy,n] = BinXY(x,y,mode,varargin)
 
 nbins = 1000;
 edge_distribution = 'linear';
+edge_preselect = [];
 for ii = 1:2:length(varargin)
       eval([varargin{ii} '= varargin{' num2str(ii+1) '};']);
 end
 
-if mode == 'y'
+if mode == 'y';
     a = y;
     y = x;
     x = a;
@@ -25,6 +26,8 @@ if strcmp(edge_distribution,'linear')
 elseif strcmp(edge_distribution,'histeq')
     % change the function 
     edgex = Bin_Edge_Histeq(x, nbins(1));
+else strcmp(edge_distribution,'preselect'); % use histogram to find the proper bin...
+    edgex = edge_preselect;
 end
 [n,~,bins] = histcounts(x,edgex);
 ty = sparse(1:length(x),bins,y);

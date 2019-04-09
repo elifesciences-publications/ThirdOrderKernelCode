@@ -1,1 +1,0 @@
-PARAMS	13EPOCHS	1Stimulus.stimtype	50013Stimulus.duration	72000Stimulus.framesPerUp	3Stimulus.whichGlid	2Stimulus.updateRate	60Stimulus.pixX	5Stimulus.diagDirec	-1Stimulus.pol	1Stimulus.reseed	0Stimulus.mLum	0.5Stimulus.contrast	1Stimulus.glidWd	4Stimulus.grayContrast	0
