@@ -43,7 +43,7 @@ n_space = size(v_est(1).v2, 1);
 %% if spatial_range = 1;
 n_extra = n_space - spatial_range + 1;
 v2_individual = [v_est(:).v2];
-if isfield(data_unit, 'v3')
+if isfield(v_est, 'v3')
     v3_individual = [v_est(:).v3];
 end
 %% create a adding matrix.
@@ -58,12 +58,12 @@ adding_matrix = toeplitz(c, r);
 % v_real = repmat(v_real, [1, n_extra]); v_real = v_real'; v_real = v_real(:);
 
 v2 = v2_individual' *  adding_matrix; v2 = v2(:, 1);
-if isfield(data_unit, 'v3')
+if isfield(v_est, 'v3')
     v3 = v3_individual' * adding_matrix; v3 = v3(:, 1);
 end
 v_real = v_real';
 data.v2 = v2;
-if isfield(data_unit, 'v3')
+if isfield(v_est, 'v3')
     data.v3 = v3;
 else
     data.v3 = [];

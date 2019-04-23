@@ -31,9 +31,12 @@ lim_max = max([xlim(2), ylim(2)]);
 lim_min = min([xlim(1), ylim(1)]);
 lim = [lim_min, lim_max];
 set(gca, 'XLim', lim , 'YLim', lim );
-% fit...
+% The data is flipped here. when illustrator, do not foget to flip them
+% back.
+
 [Err, P] = fit_2D_data(-kernel_data.mean, -glider_resp_3o_mean_positive, 'no');
 lim_for_fit = lim;
+
 % yfit = lim_for_fit * P(1) + 0;
 yfit_unity = lim_for_fit; % unity line??
 yfit_fitting =  lim_for_fit * P(1) + P(2);

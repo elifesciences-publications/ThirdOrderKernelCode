@@ -1,4 +1,4 @@
-function SupplementaryFigure_3_2_BC_NaturalSceneStatisitcs()
+function SupplementaryFigure_3_2BC_NaturalSceneStatisitcs()
 regenerate_data_flag = false;
 %%
 FWHM_bank = [15, 25, 35, 45, 55, 65, 75];
@@ -12,7 +12,8 @@ if regenerate_data_flag
         stim_statistics{ii} = collect_all_individual_scenes_statistics('FWHM', FWHM_bank(ii));
     end
 else
-    load('D:\ThirdOrderKernel_intermediate_data\natural_scene_statistics')
+    S = GetSystemConfiguration;
+    load(fullfile(S.natural_scene_simulation_path, 'natural_scene_statistics.mat'));
 end
 %% plot histogram of all of them. particular, skewness.
 % set up color scheme

@@ -5,7 +5,8 @@ if strcmp(OSMode,'PC')
     
     % get the system Config, so that it could be set to H/
 %     S = GetSystemConfiguration;
-    homedir = 'D:\Natural_Scene_Simu';
+    S = GetSystemConfiguration;
+    homedir = S.natural_scene_simulation_path;
     s = '\';
     % use the
 else strcmp(OSMode,'hpc')

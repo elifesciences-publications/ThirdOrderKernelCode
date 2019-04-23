@@ -1,4 +1,4 @@
-function Figure4_2_SVD()
+function SupplementaryFigure_4_2_SVD()
 clear
 clc
 

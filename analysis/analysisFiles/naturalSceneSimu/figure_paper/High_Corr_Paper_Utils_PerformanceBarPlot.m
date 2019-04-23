@@ -43,10 +43,10 @@ else
 end
 text(3, yLim(2) + 0.1,improvement_metric_str,'Rotation',45,'HorizontalAlignment','center','FontSize', axesFontSize)
 
-if ~isempty(weight_ratio)
-    weight_ratio_str = ['(',sprintf('%.1f+/-%.1f', weight_ratio.mean, weight_ratio.sem ),')'];
-    text(n_bar, yLim(2) + 0.1,weight_ratio_str,'Rotation',45,'HorizontalAlignment','center','FontSize', axesFontSize)
-end
+% if ~isempty(weight_ratio)
+%     weight_ratio_str = ['(',sprintf('%.1f+/-%.1f', weight_ratio.mean, weight_ratio.sem ),')'];
+%     text(n_bar, yLim(2) + 0.1,weight_ratio_str,'Rotation',45,'HorizontalAlignment','center','FontSize', axesFontSize)
+% end
 
 y_max =  max(metric.mean)* 1.5;
 y_min =  min(min(metric.mean)* 1.5, 0);

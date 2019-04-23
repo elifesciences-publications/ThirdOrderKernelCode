@@ -67,6 +67,7 @@ for ii = 1:1:4
     
     subplot(4,4,ii + 12);
     h_line_plot = plot(picture_show{ii}(line_plot,:),'k');
+    hold on; plot(get(gca, 'XLim'), [0,0], 'k--');
     set(gca,'XTick',[1,927/2,927],'XTickLabel',{'-180\circ','0\circ','180\circ'});
     if ii <4
         set(gca,'Xlim',[1, 927],'YLim',ylim_range{ii} * 1.1);

@@ -12,6 +12,7 @@ if ~exist(data_set_str,'dir')
     %% also, copy the image data into the folder.
     %     copyfile('image_moments_correlations.mat', fullfile(data_set_str, 'image_moments_correlations.mat'));
 end
+curr_folder = pwd;
 cd(data_set_str);
 %%
 N = 32;
@@ -76,10 +77,10 @@ if plot_image_vs_solution_moments_flag
     tmp = randperm(n); plot_ind = tmp(1:n_use);
     
     scatter_plot(data_image, data_solution, 'MED', plot_ind);
-    MySaveFig_Juyue(gcf, 'performance_of_current_model_solution_scatter_200',data_set_str, 'nFigSave',2,'fileType',{'eps','pdf'});
+%     MySaveFig_Juyue(gcf, 'performance_of_current_model_solution_scatter_200',data_set_str, 'nFigSave',2,'fileType',{'eps','pdf'});
     %     MySaveFig_Juyue(gcf, 'performance_of_current_model_solution',data_set_str, 'nFigSave',2,'fileType',{'eps','fig'});
     density_plot(data_image, data_solution, 'med mode', []);
-    MySaveFig_Juyue(gcf, 'performance_of_current_model_solution_density',data_set_str, 'nFigSave',2,'fileType',{'png','fig'});
+%     MySaveFig_Juyue(gcf, 'performance_of_current_model_solution_density',data_set_str, 'nFigSave',2,'fileType',{'png','fig'});
 end
 
 
@@ -173,7 +174,7 @@ if plot_image_vs_syn_image_correlations_flag
     MySaveFig_Juyue(gcf, 'performance_of_syn_image_correlation',data_set_str, 'nFigSave',2,'fileType',{'png','fig'});
 end
 
-cd ..
+cd (curr_folder)
 end
 %% What is wrong with those images???? That is a harder problem... accept what it is...
 %% get outof the folder.

@@ -1,4 +1,4 @@
-function SupplementaryFigure_3_1B_FWHM_Demo()
+function SupplementaryFigure_3_2A_FWHM_Demo1D()
 
 clear
 clc

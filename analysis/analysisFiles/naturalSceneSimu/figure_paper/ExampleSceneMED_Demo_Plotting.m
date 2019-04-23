@@ -1,4 +1,10 @@
-function ExampleSceneMED_Demo_Plotting(med, p_i, I)
+function ExampleSceneMED_Demo_Plotting(med, p_i, I, varargin)
+%% 
+plot_natural_scene_flag = 1;
+for ii = 1:2:length(varargin)
+    eval([varargin{ii} '= varargin{' num2str(ii+1) '};']);
+end
+
 %%
 n_hor = 927;
 MakeFigure_Paper;
@@ -8,7 +14,12 @@ plot_size      = [[233,50];[233,40];[233,40]];
 ylim = [[-2,3]; [-2,2]; [-2,2]];
 yTick = [[-1, 0, 1];[-1, 0, 1]; [-1, 0, 1]];
 color_bank = [;[0,0,0]; [51, 102, 153];[255,51,51]]/255 ;
-for ii = 1:1:3
+if plot_natural_scene_flag
+    ii_start = 1;
+else
+    ii_start = 2;
+end
+for ii = ii_start:1:3
     axes('Units', 'points', 'Position', [position_bank(ii, 1) + 14,position_bank(ii, 2),plot_size(ii,1),plot_size(ii,2)]);
     plot(I{ii},'color',color_bank(ii, :));
     hold on
@@ -28,9 +39,10 @@ end
 
 axes('Units', 'points', 'Position',  [300, 500 - 30 * 2 + 5, 108, 100]);
 hold on
-plot_contrast_distribution(med{1}, p_i{1}, p_i{2}, I{1}, 1, 0)
+plot_contrast_distribution(med{1}, p_i{1}, p_i{2}, I{1}, 1, 0, plot_natural_scene_flag)
 % plot([med{1}.gray_value(1),med{1}.gray_value(1)], get(gca, 'YLim'), 'k--');
 % plot([med{1}.gray_value(end),med{1}.gray_value(end)], get(gca, 'YLim'),'k--');
+    
 plot([med{1}.mu_true(1),med{1}.mu_true(1)], get(gca, 'YLim'),'k--');
 ConfAxis('fontSize', 8, 'LineWidth', 0.5);
 

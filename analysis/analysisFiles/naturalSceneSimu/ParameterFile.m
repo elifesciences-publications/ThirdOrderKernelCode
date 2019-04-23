@@ -1,7 +1,7 @@
 function param = ParameterFile(OSMode,cl_FWHM, histeqMode,onlyLum,velCalMode,velSampMode,varargin)
 nStim = 1000;
 FWHMBank = [];
-contrast_form = 'static'
+contrast_form = 'static';
 for ii = 1:2:length(varargin)
     eval([varargin{ii} '= varargin{' num2str(ii+1) '};']);
 end

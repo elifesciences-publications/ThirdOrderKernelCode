@@ -1,5 +1,7 @@
 function Figure1B_NaturalScene()
-load('D:\ThirdOrderKernel_intermediate_data\contrast_image.mat');
+S = GetSystemConfiguration;
+
+data = load(fullfile(S.natural_scene_simulation_path, 'contrast_image.mat'));
 LineWidth_data = 1;
 LineWidth_axis = 0.5;
 
@@ -8,7 +10,7 @@ hor_l = 927;
 ver_l = 231;
 example_row = 50;
 
-ns_scene = contrPictureLocal{45}((1:ver_l), 1 : end); %%
+ns_scene = data.contrPictureLocal{45}((1:ver_l), 1 : end); %%
 [n_ver_pixels,n_hor_pixels] = size(ns_scene);
 
 

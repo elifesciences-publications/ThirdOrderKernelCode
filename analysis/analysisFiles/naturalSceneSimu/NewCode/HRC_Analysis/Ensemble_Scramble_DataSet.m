@@ -3,7 +3,7 @@ function Ensemble_Scramble_DataSet(generate_synthetic_image_flag, generate_data_
 switch kernel_extraction_method
     case 'HRC'
         which_kernel_type = 'HRC_binary_dense';
-        ylabel_str = 'HRC/ME output';
+        ylabel_str = 'HRC output';
     case 'STE'
         which_kernel_type = 'STE_binary';
         ylabel_str = 'Motion Energy Model output';
@@ -25,6 +25,7 @@ scene_name = ['image_set_', int2str(set_num)];
 
 %% 
 if generate_synthetic_image_flag
+    error('need to fix the directories before using this')
     % for scrambling.
 %     ensemble_scrambling_utils_generate_image_set(set_num, n_image_per_set, image_storage_folder,scene_name);
     % preserve second order structure.
@@ -33,6 +34,7 @@ end
 
 %%
 if generate_data_flag
+    error('need to fix the directories before using this')
 %     velocity.distribution = 'gaussian';
 %     velocity.range = 114;
         velocity.distribution = 'binary';
@@ -80,7 +82,7 @@ if analyze_data_flag
         data_set{ii} = Analysis_Utils_GetAllData_EnforceSymmetry(data);
         
     end
-    %%
+    %% plot
     color_different_scenes = brewermap(2, 'Accent');
     MakeFigure;
     subplot(2,2,1)
@@ -107,38 +109,5 @@ if analyze_data_flag
     legend('natural scene', image_property)
     set(gca, 'YTick',[]);
     Velocity_ScatterPlot_Utils('image velocity [deg/sec]', ylabel_str, 'XTick', [-1000,-500,500,1000], 'xLim', [-1100, 1100]);
-    %% put the label at the correct position...
-    MySaveFig_Juyue(gcf, image_property ,['NS',which_kernel_type], 'nFigSave',2,'fileType',{'png','eps'})
-    
-    %% plot the 99th percentile.
-    MakeFigure;
-    subplot(2,2,2)
-    hold on
-    mean_v2_store = cell(2, 1);
-    for ii = [1,2]
-        mean_v2 = mean(data_set{ii}.v2, 2);
-        v2_percentile_99 = prctile(data_set{ii}.v2, 95, 2);
-        v2_percentile_1 = prctile(data_set{ii}.v2, 5, 2);
-        
-        v_real = data_set{ii}.v_real(:,1);
-        
-        % sort v_real.
-        [v_real_sort, idx_sort] = sort(v_real);
-        mean_v2_sort = mean_v2(idx_sort);
-        mean_v2_store{ii} = mean_v2_sort;
-        v2_percentile_99_sort =  v2_percentile_99(idx_sort);
-        v2_percentile_1_sort  = v2_percentile_1(idx_sort);
-        hold on
-        PlotXY_Juyue(v_real_sort, mean_v2_sort, 'errorBarFlag', 'true', 'sem', [v2_percentile_99_sort';v2_percentile_1_sort'],...
-            'asym_sem_flag', true,'colorError',color_different_scenes(ii,:),'colorMean',color_different_scenes(ii,:));
-    end
-    hold on
-    plot(v_real_sort, mean_v2_store{1},'color',color_different_scenes(1,:));
-    ConfAxis
-    set(gca, 'XAxisLocation','origin', 'YAxisLocation', 'origin');
-    set(gca, 'YTick',[]);
-    title('the color bar is 95 percentile')
-    Velocity_ScatterPlot_Utils('image velocity [deg/sec]', ylabel_str, 'XTick', [-1000,-500,500,1000], 'xLim', [-1100, 1100]);
-    MySaveFig_Juyue(gcf, image_property, ['NS',which_kernel_type,'colorbar_95_5_percentile'], 'nFigSave',2,'fileType',{'png','eps'})
 end
 

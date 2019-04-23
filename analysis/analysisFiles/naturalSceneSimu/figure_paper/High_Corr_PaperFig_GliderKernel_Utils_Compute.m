@@ -1,5 +1,9 @@
 function [glider_str_3o, glider_data, kernel_data] = High_Corr_PaperFig_GliderKernel_Utils_Compute()
-load('D:\Natural_Scene_Simu\parameterdata\ori_reverse_correlation.mat')
+S = GetSystemConfiguration;
+load(fullfile(S.natural_scene_simulation_path,'\parameterdata\ori_reverse_correlation.mat'))
+load(fullfile(S.natural_scene_simulation_path,'\glider_response.mat')); % catMean is the mean glider response.
+% JuyueLog_04_28 to find out the data preprocessing for glider response.
+
 third_kernel_behavior{1} = (kernel.k3_xxy_ind - kernel.k3_yyx_ind)/2;
 third_kernel_behavior{2} = -(kernel.k3_xxy_ind - kernel.k3_yyx_ind)/2;
 n_flies_kernel = size(third_kernel_behavior{1},2);
@@ -7,9 +11,6 @@ dx_bank  =  {[0,1],[0,-1]};
 nMultiBars = 1;
 %% plot the behavior behavior consistency...
 % for any glider response, find the corrparam....
-
-
-load('D:\JuyueLog\2017_04_28\cated_with_individual_response.mat'); % catMean is the mean glider response.
 catTitles = {'Diverging DT 1','Converging DT 1','Two Point DT 1','Elbow','Late Knight',...
     'Early Knight','Diverging DT 2','Converging DT 2','Elbow Late Break','Elbow Early Break',...
     'Diverging DT 3','Diverging DT 4','Converging DT 3','Converging DT 4','Two Point DT 2', ...

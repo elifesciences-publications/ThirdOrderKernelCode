@@ -1,4 +1,4 @@
-function SupplementaryFigure_3_1A_FWHM_Demo()
+function SupplementaryFigure_3_2A_FWHM_Demo2D()
 clear
 clc
 PCSetup;

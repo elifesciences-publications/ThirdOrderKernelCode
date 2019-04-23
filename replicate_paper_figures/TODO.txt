@@ -1,5 +1,7 @@
 Figure 1
 1.Contrast Map data generation.
 2.HRC data generation code. Might just have to change the diretory.
+3.dynamic contrast computation sweep. 2018_05_11.
 
-3.
+1. find Supplementary Figure 5 MED Demo.
+2. make all data_set and linking correct.

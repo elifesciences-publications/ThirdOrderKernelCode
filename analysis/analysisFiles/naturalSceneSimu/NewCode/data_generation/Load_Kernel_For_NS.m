@@ -9,11 +9,11 @@ else
     kernel_file_starter = sprintf('FWHM%d', process_stim_FWHM);
 end
 kernel_file_name = [kernel_file_starter, '_', kernel_extraction_method,'.mat'];
-kernel_storage_folder = 'D:\Natural_Scene_Simu\parameterdata';
+S = GetSystemConfiguration;
+kernel_storage_folder =  fullfile(S.natural_scene_simulation_path, '\parameterdata');
 kernel_storage_fullpath = fullfile(kernel_storage_folder, kernel_file_name);
 
 if strcmp(kernel_extraction_method, 'Holly_OLS')
-    
     load('D:\Natural_Scene_Simu\parameterdata\OLS_2o_nonorm.mat');
     kernel.k2_sym = Z.kernels.meanKernels.k2_sym;
     load('D:\Natural_Scene_Simu\parameterdata\OLS_3o_nonorm.mat')
