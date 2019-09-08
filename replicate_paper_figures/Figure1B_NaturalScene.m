@@ -17,11 +17,13 @@ ns_scene = data.contrPictureLocal{45}((1:ver_l), 1 : end); %%
 MakeFigure_Paper;
 %% 2D plot.
 axes('Units', 'points', 'Position', [250,500,300,300/4],'FontName','Arial')
-imagesc(ns_scene);colormap(gray);hold on
+cm = histe(ns_scene, 256);
+
+imagesc(ns_scene);colormap(cm); hold on
 plot([0, n_hor_pixels],[example_row, example_row ],  'r-');
 
 ylabel('vertical spatial location');
-title('An example natural scene');
+title('example natural scene');
 
 set(gca, 'XTick',[]);
 set(gca, 'YTick',[1, n_ver_pixels - 1], 'YTickLabel', {'-45\circ', '45\circ'});
@@ -47,7 +49,7 @@ xlabel('horizontal spatial location');
 
 %% plot another natural scene for the color bar.
 axes('Units', 'points', 'Position', [250,300,300,300/4],'FontName','Arial')
-imagesc(ns_scene);colormap(gray);hold on
+imagesc(ns_scene); colormap(cm); hold on
 plot([0, n_hor_pixels],[example_row, example_row ],  'r-');
 
 ylabel('vertical spatial location');
@@ -57,7 +59,7 @@ set(gca, 'XTick',[]);
 set(gca, 'YTick',[1, n_ver_pixels - 1], 'YTickLabel', {'-45\circ', '45\circ'});
 
 c = colorbar;
-set(c, 'LineWidth', LineWidth_axis, 'Ticks',[-1, 0, 1, 2, 3]);
+set(c, 'LineWidth', LineWidth_axis, 'Ticks',[-1,0, 1, 2, 3]);
 % daspect([1, 1, 1]);
 ConfAxis('LineWidth', LineWidth_axis,'fontSize', 10);
 
