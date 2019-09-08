@@ -1,5 +1,0 @@
-function cov_mat_aligned = Roi_Center_Alignment_CovMat(roi,cov_mat)
-second_kernel_full = STC_Utils_CovMatToSecondKernel(cov_mat);
-second_kernel_full_aligned_flipped = Roi_Center_Alignment_SecondKernel_Full_Draft(roi,second_kernel_full);
-cov_mat_aligned = STC_Utils_SecondKernelToCovMat(second_kernel_full_aligned_flipped,'correctSelfTermFlag', false);
-end

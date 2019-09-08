@@ -1,1 +1,0 @@
-PARAMS	13	EPOCHS	2	Stimulus.epochName	bright	dark Stimulus.stimtype	90000	90000    Stimulus.ordertype	1	1    Stimulus.duration	30	30    Stimulus.frequency	2	2  Stimulus.bright 	1	0   

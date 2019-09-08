@@ -1,8 +1,0 @@
-PARAMS	13	
-EPOCHS	1	
-Stimulus.epochName	2Hz flashing
-Stimulus.stimtype	90002  
-Stimulus.ordertype	1
-Stimulus.duration	30
-Stimulus.frequency	2  
-
